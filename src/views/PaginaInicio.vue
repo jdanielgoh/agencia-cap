@@ -21,18 +21,17 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <div
-      class="contenedor-portada"
-      style="height: 90vh"
-    >
+    <div class="contenedor-portada">
       <img
         class="portada"
-        src="http://placekitten.com/970/980"
+        src="http://placekitten.com/1280/980"
       />
       <div class="degradado-negro-abajo">
         <div class="contenido-abajo">
           <div class="contenedor ancho-lectura">
-            <p class="titulo-eni texto-centrado">Título de ENI</p>
+            <h1 class="titulo-eni texto-centrado texto-color-1">
+              Título de ENI
+            </h1>
           </div>
         </div>
       </div>
