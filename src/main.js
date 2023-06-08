@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import SisdaiComponentes from 'sisdai-componentes/src/index'
 
+// Componentes y directivas de la biblioteca
 Vue.use(SisdaiComponentes)
 
 Vue.config.productionTip = false

@@ -6,7 +6,6 @@ import instituciones from '@/assets/data/creditos/instituciones-ejemplo.json'
 <template>
   <div class="contenedor tmp-contendor-chico m-y-10">
     <h1>Créditos</h1>
-
     <div class="flex flex-wrap">
       <div class="columna-8">
         <p class="titulo-lista">Créditos Instituciones</p>

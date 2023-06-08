@@ -1,4 +1,4 @@
-# sisdai-baseweb
+# sisdai-proyecto-base
 
 Este repositorio contiene la base para levantar un dominio con los requerimientos mínimos para un proyecto que utilice
 el Sistema de Diseño y Accesibilidad para la Investigación (Sisdai).
@@ -19,7 +19,7 @@ el Sistema de Diseño y Accesibilidad para la Investigación (Sisdai).
   git clone --single-branch --no-tags <URL_DEL_REPOSITORIO>
   ```
 
-- actualizar en el pagkage el nombre del proyecto y reiniciar la versión
+- actualizar en el package el nombre del proyecto y reiniciar la versión
 
   ```bash
   "name": "nombre-del-proyecto-nuevo",

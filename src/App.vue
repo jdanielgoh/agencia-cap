@@ -32,12 +32,13 @@ const infoDespliegue = {
       :entornoProyecto="infoDespliegue.entorno_proyecto"
       :actualizacionProyecto="infoDespliegue.actualizacion_proyecto"
     />
-    <SisdaiPiePaginaConacyt />
+    <SisdaiPiePaginaConahcyt />
     <SisdaiPiePaginaGobMx />
   </div>
 </template>
 
 <style lang="scss">
+// Estilos de la biblioteca
 @import 'node_modules/sisdai-css/src/eni.scss';
 
 .overflow-hidden {
