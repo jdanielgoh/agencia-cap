@@ -15,6 +15,19 @@ const now = new Date()
  */
 module.exports = defineConfig({
   /**
+   * @property {Function}
+   * Permite modificar la configuración interna del webpack. En este caso, si los hints en el
+   * performance se colocan en falso, se apagan y deja de mandar error o warning cuando los
+   * assets creados al compilar exceden de 250kb.
+   *
+   * @see https://webpack.js.org/configuration/performance/
+   * @see https://cli.vuejs.org/guide/webpack.html#chaining-advanced
+   */
+  chainWebpack: config => {
+    config.performance.set('hints', false)
+  },
+
+  /**
    * @property {boolean} [productionSourceMap=true] Establecer esto en falso puede acelerar las
    * compilaciones de producción si no necesita source maps para la producción.
    *
