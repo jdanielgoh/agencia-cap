@@ -41,4 +41,10 @@ const router = new VueRouter({
   },
 })
 
+// Muestra el título de la página dependiendo de las vistas
+router.beforeEach((to, from, next) => {
+  document.title = `${process.env.VUE_APP_TITLE} | ${to.name}`
+  next()
+})
+
 export default router
