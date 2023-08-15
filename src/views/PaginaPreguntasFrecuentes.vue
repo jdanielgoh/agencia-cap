@@ -3,7 +3,10 @@ import preguntas from '@/assets/data/preguntas/frecuentes-ejemplo.json'
 </script>
 
 <template>
-  <div class="contenedor ancho-lectura m-y-10">
+  <main
+    class="contenedor ancho-lectura m-y-10"
+    id="principal"
+  >
     <h1>Preguntas Frecuentes</h1>
     <div
       class="p-y-1"
@@ -19,5 +22,5 @@ import preguntas from '@/assets/data/preguntas/frecuentes-ejemplo.json'
         {{ respuesta }}
       </p>
     </div>
-  </div>
+  </main>
 </template>

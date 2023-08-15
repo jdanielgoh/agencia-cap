@@ -25,6 +25,11 @@ function agregandoAriaHidden() {
     id="app"
     :class="store.getters['accesibilidad/clasesAccesibles']"
   >
+    <a
+      href="#principal"
+      class="ir-contenido-principal"
+      >Ir a contenido principal</a
+    >
     <SisdaiNavegacionGobMx />
     <NavegacionPrincipalBase />
 
