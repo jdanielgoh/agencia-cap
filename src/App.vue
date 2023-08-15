@@ -1,7 +1,9 @@
 <script setup>
 import store from '@/store'
-import { onMounted, onUpdated } from 'vue'
-
+import { onMounted, onUpdated, watch, ref, nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router/composables'
+const ruta = useRoute()
+const router = useRouter()
 import NavegacionPrincipalBase from './components/navegacion/NavegacionPrincipalBase.vue'
 
 const infoDespliegue = {
@@ -9,14 +11,45 @@ const infoDespliegue = {
   actualizacion_proyecto: process.env.DATE_DEPLOY,
   entorno_proyecto: process.env.ENV_DEPLOY,
 }
+const entradaInicial = ref(true)
 
 // Agrega aria-hidden al elemento con icono
-onMounted(agregandoAriaHidden)
+onMounted(async () => {
+  await router.onReady(() => {
+    ruta.path === '/' ? (entradaInicial.value = false) : null
+  })
+  agregandoAriaHidden()
+})
 onUpdated(agregandoAriaHidden)
 function agregandoAriaHidden() {
   document.querySelectorAll('span.icono-enlace-externo').forEach(el => {
     el.setAttribute('aria-hidden', 'true')
   })
+}
+// Con este watch definimos a donde se moverá el focus al cambiar de ruta
+watch(
+  () => ruta.path,
+  () => {
+    if (!entradaInicial.value) {
+      if (ruta.path) {
+        nextTick(() => {
+          moviendoFocoNavegacion(ruta.path)
+        })
+      }
+    } else {
+      entradaInicial.value = false
+    }
+  }
+)
+
+function moviendoFocoNavegacion(path) {
+  path
+  //let carpetas = path.split('/').filter(d => d != '')
+  const elemento_receptor = document.querySelector('#principal')
+  if (elemento_receptor) {
+    elemento_receptor.tabIndex = '-1'
+    elemento_receptor.focus()
+  }
 }
 </script>
 
