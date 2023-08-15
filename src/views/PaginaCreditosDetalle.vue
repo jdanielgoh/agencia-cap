@@ -13,7 +13,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="contenedor ancho-lectura m-y-10">
+  <main
+    class="contenedor ancho-lectura m-y-10"
+    id="principal"
+  >
     <div class="tmp-credito-detalle">
       <div class="img">
         <img
@@ -35,7 +38,7 @@ onMounted(() => {
       {{ parrafo }}
     </p>
     <router-link to="/creditos">Regresar</router-link>
-  </div>
+  </main>
 </template>
 
 <style lang="scss">

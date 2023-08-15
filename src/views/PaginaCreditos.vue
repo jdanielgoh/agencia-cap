@@ -4,7 +4,10 @@ import instituciones from '@/assets/data/creditos/instituciones-ejemplo.json'
 </script>
 
 <template>
-  <div class="contenedor tmp-contendor-chico m-y-10">
+  <main
+    class="contenedor tmp-contendor-chico m-y-10"
+    id="principal"
+  >
     <h1>Créditos</h1>
     <div class="flex flex-wrap">
       <div class="columna-8">
@@ -72,7 +75,7 @@ import instituciones from '@/assets/data/creditos/instituciones-ejemplo.json'
         </ul>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style>

@@ -1,5 +1,8 @@
 <template>
-  <div class="contenedor m-y-10">
+  <main
+    class="contenedor m-y-10"
+    id="principal"
+  >
     <h1>Página no encontrada</h1>
-  </div>
+  </main>
 </template>
