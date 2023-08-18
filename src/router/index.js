@@ -11,21 +11,6 @@ const routes = [
     component: PaginaInicio,
   },
   {
-    path: '/creditos',
-    name: 'Créditos',
-    component: () => import('../views/PaginaCreditos.vue'),
-  },
-  {
-    path: '/creditos/:id',
-    name: 'Créditos / Investigador',
-    component: () => import('../views/PaginaCreditosDetalle.vue'),
-  },
-  {
-    path: '/preguntas-frecuentes',
-    name: 'Preguntas Frecuentes',
-    component: () => import('../views/PaginaPreguntasFrecuentes.vue'),
-  },
-  {
     path: '**',
     name: 'pagina-no-encontrada',
     component: () => import('@/views/ErrorPaginaNoEncontrada.vue'),

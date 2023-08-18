@@ -20,7 +20,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div>
+  <main id="principal">
     <div class="contenedor-portada">
       <img
         class="portada"
@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <div class="contenedor ancho-lectura m-y-10">
-      <p class="titulo-pagina">Inicio</p>
+      <h2 class="texto-centrado m-y-8-esc m-y-4-mov m-x-auto">Inicio</h2>
     </div>
-  </div>
+  </main>
 </template>
