@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <div class="contenedor ancho-lectura m-y-10">
-      <p class="titulo-pagina">Inicio</p>
+      <h2 class="texto-centrado m-y-8-esc m-y-4-mov m-x-auto">Inicio</h2>
     </div>
   </main>
 </template>

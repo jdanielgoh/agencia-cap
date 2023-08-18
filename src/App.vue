@@ -69,14 +69,6 @@ function moviendoFocoNavegacion(path) {
     <router-view />
 
     <SisdaiMenuAccesibilidad :objetoStore="store" />
-    <SisdaiBotonFlotante
-      :enlaces="[
-        {
-          clasesCss: 'icono-resaltado',
-          icono: 'icono-documento icono-3',
-        },
-      ]"
-    />
     <SisdaiInfoDeDespliegue
       :versionProyecto="infoDespliegue.version_proyecto"
       :entornoProyecto="infoDespliegue.entorno_proyecto"
