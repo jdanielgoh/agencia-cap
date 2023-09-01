@@ -1,6 +1,6 @@
 {
   "name": "sisdai-proyecto-base",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "core-js": "^3.29.1",
-    "sisdai-componentes": "github:salsa-community/sisdai-componentes#v2.3.3",
-    "sisdai-css": "github:salsa-community/sisdai-css#v0.39.0",
+    "sisdai-componentes": "github:salsa-community/sisdai-componentes#enis",
+    "sisdai-css": "github:salsa-community/sisdai-css#v0.39.3",
     "vue": "^2.7.14",
     "vue-matomo": "4.1.0",
     "vue-router": "^3.6.5",
