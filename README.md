@@ -1,14 +1,17 @@
 # sisdai-proyecto-base
 
-Este repositorio contiene la base para levantar un dominio con los requerimientos mínimos para un proyecto que utilice
-el Sistema de Diseño y Accesibilidad para la Investigación (Sisdai).
+Este repositorio contiene la base para levantar un dominio con los
+requerimientos mínimos para un proyecto que utilice
+el Sistema de Diseño y Accesibilidad para la
+Investigación ([Sisdai](https://sisdai.conahcyt.mx/).).
 
 > **_Limitación de responsabilidad_**
 >
-> El presente es un proyecto en construcción, por tanto ni el equipo del Sisdai
-> ni el de Salsa son responsables del uso y contenido del presente recurso,
+> El presente es un proyecto en construcción, por tanto el equipo del Sisdai
+> no es responsable del uso y contenido del presente recurso,
 > toda vez que se trata de una versión en su modalidad prueba, y no de una
-> versión pública, por lo que una vez que sea lanzada la versión final,
+> versión liberada al público, por lo que una vez que sea lanzada la versión
+> final,
 > se invita a la persona usuaria a consultarla y validar sus requisitos.
 
 ## Uso local
@@ -44,7 +47,8 @@ el Sistema de Diseño y Accesibilidad para la Investigación (Sisdai).
   npm run build:dev
   ```
 - montar el codigo de la carpeta `dist` en el ambiente de pruebas
-- configurar las rutas en el servidor de pruebas [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
+- configurar las rutas en el servidor de
+  pruebas [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
 
 ## Para producción
 
@@ -54,7 +58,8 @@ el Sistema de Diseño y Accesibilidad para la Investigación (Sisdai).
   npm run build
   ```
 - montar el codigo de la carpeta `dist` en el ambiente de producción
-- configurar las rutas en el servidor de producción [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
+- configurar las rutas en el servidor de
+  producción [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
 
 ---
 
@@ -93,12 +98,21 @@ el Sistema de Diseño y Accesibilidad para la Investigación (Sisdai).
 
 **SOFTWARE LIBRE Y ESTÁNDARES ABIERTOS**
 
-Sisdai está alineado a las disposiciones establecidas por la Coordinación de Estrategia Digital Nacional (DOF: 06/09/2021) en donde se estipula que las "políticas y disposiciones tienen como objetivo fortalecer el uso del software libre y los estándares abiertos, fomentar el desarrollo de aplicaciones institucionales con utilidad pública, lograr la autonomía, soberanía e independencia tecnológicas dentro de la APF". En el artículo 63 se explicita que "cuando se trate de desarrollos basados en software libre, se respetarán las condiciones de su licenciamiento original [...]", en este sentido este proyecto está alineado a lo que se define desde [SALSA](https://salsa.crip.conacyt.mx/).
+Sisdai y sisdai-proyecto-base están alineadas a las disposiciones establecidas
+por
+la Coordinación de Estrategia Digital Nacional (
+DOF:06/09/2021) en donde se estipula que las "políticas y disposiciones tienen
+como objetivo fortalecer el uso del software
+libre y los estándares abiertos, fomentar el desarrollo de aplicaciones
+institucionales con utilidad pública, lograr la
+autonomía, soberanía e independencia tecnológicas dentro de la APF". En el
+artículo 63 se explicita que "cuando se trate
+de desarrollos basados en software libre, se respetarán las condiciones de su
+licenciamiento original [...]".
 
 ## Contribuir
 
-Para contribuir al proyecto, se pide que se haga por medio de los lineamientos de contribución de SALSA que se
-pueden consultar [aquí](https://salsa.crip.conacyt.mx/guidelines/contribute/).
-
-\*En los lineamientos de contribución se lista la rama _master_ como principal, sin embargo en este proyecto, dicha
-rama es _main_.
+Para contribuir al proyecto, se pide que se haga tomando en cuenta la guía de
+contribución
+de [git](https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Contribuyendo-a-un-Proyecto)
+.
