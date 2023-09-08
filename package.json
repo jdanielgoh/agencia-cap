@@ -1,6 +1,6 @@
 {
   "name": "sisdai-proyecto-base",
-  "version": "1.2.5",
+  "version": "1.2.7",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "core-js": "^3.29.1",
-    "sisdai-componentes": "github:salsa-community/sisdai-componentes#enis",
-    "sisdai-css": "github:salsa-community/sisdai-css#v0.39.3",
+    "sisdai-componentes": "git+https://codigo.conahcyt.mx/sisdai/sisdai-componentes#enis",
+    "sisdai-css": "git+https://codigo.conahcyt.mx/sisdai/sisdai-css#v0.41.1",
     "vue": "^2.7.14",
     "vue-matomo": "4.1.0",
     "vue-router": "^3.6.5",
@@ -45,10 +45,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/salsa-community/sisdai-proyecto-base"
+    "url": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base"
   },
   "bugs": {
-    "url": "https://github.com/salsa-community/sisdai-proyecto-base/issues"
+    "url": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base/issues"
   },
-  "homepage": "https://github.com/salsa-community/sisdai-proyecto-base#readme"
+  "homepage": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base#readme"
 }
