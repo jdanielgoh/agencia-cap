@@ -8,6 +8,7 @@
       <a
         href="#"
         class="nav-hipervinculo"
+        target="_blank"
         ><b>IR A ENLACE EXTERNO</b></a
       >
     </template>
