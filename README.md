@@ -10,23 +10,21 @@ en su equipo a través del **protocolo HTTPS**.
 
 ## Utilidades
 
-- header footer gobierno
-- footer conacyt
-- visualizador de ambiente y ultima version actualizada
-- navegacion principal conacyt
-- menu de accesibilidad
-- uso sisdai mejora accesibilidad
-- homologacion estilos institucionales eni
+- Homologa los estilos utilizando el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
+- Mejora la accesibilidad mediante el uso de html semántico y aplicando las reglas establecidad en Sisdai.
+- Facilita la actualización de elementos institucionales requeridos como cabeceras y pies de páginas de Gobierno de México y Conahcyt.
+- Hace visible en ambientes de desarrollo las versiones actuales para mejorar la comunicación en revisiones
+- Agrega de base un menú de accesibilidad con funciones adaptadas y conectadas con el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
 
 ## Contenido del proyecto
 
-| Elemento                    | Ubicacion                  | Descripción                                                                                                                                   |
-| --------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| main.js                     | src/                       | aqui estan precargados sisdai css y sisdai componentes y se configura el matomo                                                               |
-| App.vue                     | src/                       | estructura basica de un proyecto headers footers gobx + cona, menu de navegacion, el menu de accesibilidad y componente de info de despliegue |
-| accesibilidad (modulo vuex) | src/store/index.js         | aqui se cargan las variables globales que necesita el menu de accesibilidad para interactuar con el sitio                                     |
-| PaginaInicio.vue            | src/views/                 | ejemplo de una portada para iniciar el contenido de un nuevo capitulo eni                                                                     |
-| NavegacionPrincipalBase.vue | src/components/nagevacion/ | utilizando la base de componente de navegacion, aqui se pueden actualizar los links del menu del sitio                                        |
+| Elemento                    | Ubicacion                  | Descripción                                                                                                                                                            |
+| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| main.js                     | src/                       | Archivo en donde estan precargados sisdai css y sisdai componentes y se configura el matomo                                                                            |
+| App.vue                     | src/                       | Archivo con la estructura basica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
+| accesibilidad (modulo vuex) | src/store/index.js         | En el store se importan las variables globales que necesita el menú de accesibilidad para interactuar con el sitio                                                     |
+| PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capitulo eni                                                                              |
+| NavegacionPrincipalBase.vue | src/components/nagevacion/ | Utilizando la base de componente de navegacion, en este componente se pueden actualizar los links del menu del sitio                                                   |
 
 ### Ubicacion de los archivos
 
@@ -44,7 +42,7 @@ sisdai-proyecto-base/
         └── PaginaInicio.vue
 ```
 
-## Requerimientos
+## Instalación y uso
 
 ### Pasos previos recomendados
 
@@ -131,6 +129,17 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
+4.  Vincula tu proyecto con su repositorio
+
+    Busca la url que se utilizará para clonar el proyecto nuevo y corre el siguiente comando reemplazando la `<URL_DEL_REPOSITORIO>` por la url de tu proyecto
+
+    ```bash
+    git remote set-url origin <URL_DEL_REPOSITORIO>
+    ```
+
+
+5. Actualiza este README.md con la información que requiera tu proyecto
+
 ### Instalación
 
 Establece la versión adecuada de npm y nvm (previamente instaladas).
@@ -179,14 +188,13 @@ npm install
 - configurar las rutas en el servidor de
   producción [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
 
----
 
 ## Actualizaciones del sisdai-proyecto-base
 
-1. Agregar el sisdai-proyecto-base repositorio remoto
+1. Agregar el sisdai-proyecto-base como repositorio remoto
 
    ```bash
-   git remote add sisdai-proyecto-base <URL_DEL_REPOSITORIO>
+   git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
    ```
 
 2. Configurar el repositorio remoto para no jalar los tags ni heads
@@ -238,4 +246,4 @@ el idioma español se respeta la versión original de acuerdo al proyecto
 
 Por el momento sólo quienes sean
 parte de un equipo de investigación del capítulo de un [ENI](https://eni.conahcyt.mx)
-podrán levantar issues en este repositorio.
+podrán levantar issues en este repositorio. Mientras que el equipo del sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/acerca-de) se encargará de mantenerlo.
