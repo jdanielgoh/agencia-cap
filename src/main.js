@@ -13,7 +13,6 @@
 //   You should have received a copy of the GNU Lesser General Public License along
 //   with sisdai-proyecto-base. If not, see <https://www.gnu.org/licenses/>.
 
-
 import Vue from 'vue'
 import VueMatomo from 'vue-matomo'
 import App from './App.vue'

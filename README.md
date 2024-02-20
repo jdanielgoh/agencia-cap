@@ -1,14 +1,48 @@
 # sisdai-proyecto-base
 
-Este repositorio contiene la base para levantar un dominio con los
+Este repositorio contiene la base para levantar una página web con los
 requerimientos mínimos para un proyecto que utilice
 el Sistema de Diseño y Accesibilidad para la
-Investigación ([Sisdai](https://sisdai.conahcyt.mx/).).
+Investigación ([Sisdai](https://sisdai.conahcyt.mx/)).
 
 Cualquier persona puede hacer uso de esta biblioteca al clonarla e instalarla
 en su equipo a través del **protocolo HTTPS**.
 
-## Requerimientos
+## Utilidades
+
+- Homologa los estilos utilizando el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
+- Mejora la accesibilidad mediante el uso de html semántico y aplicando las reglas establecidas en Sisdai.
+- Facilita la actualización de elementos institucionales requeridos como cabeceras y pies de páginas de Gobierno de México y Conahcyt.
+- Hace visible en ambientes de desarrollo las versiones actuales para mejorar la comunicación en revisiones
+- Agrega de base un menú de accesibilidad con funciones adaptadas y conectadas con el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
+
+## Contenido del proyecto
+
+| Elemento                    | Ubicacion                  | Descripción                                                                                                                                                            |
+| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| main.js                     | src/                       | Archivo en donde estan precargados sisdai css y sisdai componentes y se configura el matomo                                                                            |
+| App.vue                     | src/                       | Archivo con la estructura basica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
+| accesibilidad (modulo vuex) | src/store/index.js         | En el store se importan las variables globales que necesita el menú de accesibilidad para interactuar con el sitio                                                     |
+| PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capitulo eni                                                                              |
+| NavegacionPrincipalBase.vue | src/components/nagevacion/ | Utilizando la base de componente de navegacion, en este componente se pueden actualizar los links del menu del sitio                                                   |
+
+### Ubicacion de los archivos
+
+```bash
+sisdai-proyecto-base/
+└── src/
+    ├── main.js
+    ├── App.vue
+    ├── components/
+    │   └── navegacion
+    │       └── NavegacionPrincipalBase.vue
+    ├── store/
+    │   └── index.js #variables accesibilidad
+    └── views/
+        └── PaginaInicio.vue
+```
+
+## Instalación y uso
 
 ### Pasos previos recomendados
 
@@ -25,14 +59,88 @@ y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 - [npm (^9)](https://www.npmjs.com/get-npm)
 - [Vue.js (v2.7.14)](https://vuejs.org/)
 
-### Instalación
+### Descarga
 
-Se puede clonar e instalar este proyecto en tu equipo
+Se puede clonar este proyecto en tu equipo
 utilizando **solo el protocolo HTTPS**, es decir:
 
 ```bash
 git clone https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
 ```
+
+### Configuración
+
+Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-base` con un proyecto de Vue general que necesita configurarse con la información particular del proyecto.
+
+1.  Cambia el nombre de la carpeta, la cuál puedes renombrar con el título de tu proyecto
+    (recuerda que es mejor no utilizar espacios ni caracteres especiales)
+
+2.  Actualiza el nombre y reinicia la version en el `package.json`
+
+    ```json
+    // nombre-del-proyecto-nuevo/packaje.json
+
+    "name": "nombre-del-proyecto-nuevo",
+    "version": "0.1.0",
+    ```
+
+3.  Crea el archivo `.env` en base al `.env.example`.
+    Para cada ambiente es necesario crear el archivo de ambiente correspondiente, el .env es para el entorno local, pero las variables son las mismas en todos los ambientes, únicamente se debe cuidar que valor debe tener cada una en cada caso
+
+    ```js
+    // modo el ambiente en el que se levanta el proyecto
+    NODE_ENV = development
+
+    // título del proyecto. este aparecerá en la pestaña del navegador
+    VUE_APP_TITLE = local | sisdai-proyecto-base
+
+    // descriocion del proyecto. se utiliza para agregar metadatos para le navegador
+    VUE_APP_DESCRIPTION = local | descripcion
+
+    // el dominio en el que se verá tu proyecto
+    // en un entorno local es localhost:seguido-del-puerto
+    // para el ambiente de pruenas y produccion
+    // debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
+    VUE_APP_ENI_DOMAIN = http://localhost:8080
+
+    // carpeta o subcarpeta en donde se hospeda el código
+    // se agrega la / cuando el proyecto está en raís
+    // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar
+    // ej. para https://energia.conahcyt.mx/planeas/ el es VUE_APP_BASE_ROUTE = /planeas/
+    VUE_APP_BASE_ROUTE = /
+
+    // es una variable que utiliza en su configuracion Vue, normalmente es true
+    VUE_APP_HASH = true
+
+    // variable para el matomo, es para trackear informacion de uso del sitio
+    // se mantiene en 0 cuando no se ha asignado un id específico para el proyecto
+    // normalmente se cambia unicamente para el ambiente de producción
+    // se solicita al área de infraestructura y se escribe el ID en este campo
+    VUE_APP_MATOMO_SITEID = 0
+
+    // url de la carpeta de archivos estáticos (imágenes, documentos, etc)
+    // que el Conahcyt asigno para los ENI
+    // la única variante es que para entornos locales, de pruebas o de desarrollo
+    // se utiliza la base https://dev-dadsig-cdn.crip.conahcyt.mx/
+    // mientras que para el entorno de produccion se utliza https://cdn.conahcyt.mx/
+    // tambien se puede utilizar esta variable con el nombre del eni y el capitulo
+    // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
+    // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
+    VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+    ```
+
+4.  Vincula tu proyecto con su repositorio
+
+    Busca la url que se utilizará para clonar el proyecto nuevo y corre el siguiente comando reemplazando la `<URL_DEL_REPOSITORIO>` por la url de tu proyecto
+
+    ```bash
+    git remote set-url origin <URL_DEL_REPOSITORIO>
+    ```
+
+
+5. Actualiza este README.md con la información que requiera tu proyecto
+
+### Instalación
 
 Establece la versión adecuada de npm y nvm (previamente instaladas).
 
@@ -48,13 +156,6 @@ npm install
 
 #### Uso local
 
-Una vez teniendo clonado el repositorio en local se debe de adecuar a las necesidades del nuevo proyecto a desarrollar. Actualizar en el `package.json` el nombre del proyecto y reiniciar la versión
-
-  ```bash
-  "name": "nombre-del-proyecto-nuevo",
-  "version": "0.1.0",
-  ```
-
 - crear el `.env` en base al `.env.example`
 - instalar las dependencias
   ```bash
@@ -65,7 +166,7 @@ Una vez teniendo clonado el repositorio en local se debe de adecuar a las necesi
   npm run dev
   ```
 
-#### Para desarrollo
+#### Para desarrollo - pruebas
 
 - crear el `.env.desarrollo` en base al `.env.desarrollo.example`
 - compilar el código
@@ -78,7 +179,7 @@ Una vez teniendo clonado el repositorio en local se debe de adecuar a las necesi
 
 #### Para producción
 
-- crear el `.env.production` en base al `.env.production.example`
+- crear el `.env.production` en base al `.env.production.example` (recuerda borrar los archivos de ejemplo una vez que tengas el definitivo)
 - compilar y minificar el código
   ```bash
   npm run build
@@ -87,14 +188,13 @@ Una vez teniendo clonado el repositorio en local se debe de adecuar a las necesi
 - configurar las rutas en el servidor de
   producción [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
 
----
 
 ## Actualizaciones del sisdai-proyecto-base
 
-1. Agregar el sisdai-proyecto-base repositorio remoto
+1. Agregar el sisdai-proyecto-base como repositorio remoto
 
    ```bash
-   git remote add sisdai-proyecto-base <URL_DEL_REPOSITORIO>
+   git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
    ```
 
 2. Configurar el repositorio remoto para no jalar los tags ni heads
@@ -146,4 +246,4 @@ el idioma español se respeta la versión original de acuerdo al proyecto
 
 Por el momento sólo quienes sean
 parte de un equipo de investigación del capítulo de un [ENI](https://eni.conahcyt.mx)
-podrán levantar issues en este repositorio.
+podrán levantar issues en este repositorio. Mientras que el equipo del sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/acerca-de) se encargará de mantenerlo.

@@ -13,7 +13,6 @@
 <!--You should have received a copy of the GNU Lesser General Public License along-->
 <!--with sisdai-proyecto-base. If not, see <https://www.gnu.org/licenses/>.-->
 
-
 <script setup>
 import store from '@/store'
 import { onMounted, onUpdated, watch, ref, nextTick } from 'vue'
