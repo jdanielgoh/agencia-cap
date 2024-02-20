@@ -11,7 +11,7 @@ en su equipo a través del **protocolo HTTPS**.
 ## Utilidades
 
 - Homologa los estilos utilizando el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
-- Mejora la accesibilidad mediante el uso de html semántico y aplicando las reglas establecidad en Sisdai.
+- Mejora la accesibilidad mediante el uso de html semántico y aplicando las reglas establecidas en Sisdai.
 - Facilita la actualización de elementos institucionales requeridos como cabeceras y pies de páginas de Gobierno de México y Conahcyt.
 - Hace visible en ambientes de desarrollo las versiones actuales para mejorar la comunicación en revisiones
 - Agrega de base un menú de accesibilidad con funciones adaptadas y conectadas con el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
@@ -179,7 +179,7 @@ npm install
 
 #### Para producción
 
-- crear el `.env.production` en base al `.env.production.example`
+- crear el `.env.production` en base al `.env.production.example` (recuerda borrar los archivos de ejemplo una vez que tengas el definitivo)
 - compilar y minificar el código
   ```bash
   npm run build
