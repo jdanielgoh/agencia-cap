@@ -19,12 +19,11 @@ en su equipo a través del **protocolo HTTPS**.
 ## Contenido del proyecto
 
 | Elemento                    | Ubicacion                  | Descripción                                                                                                                                                            |
-| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| main.js                     | src/                       | Archivo en donde estan precargados sisdai css y sisdai componentes y se configura el matomo                                                                            |
+|-----------------------------| -------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura el matomo                                                                            |
 | App.vue                     | src/                       | Archivo con la estructura basica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
-| accesibilidad (modulo vuex) | src/store/index.js         | En el store se importan las variables globales que necesita el menú de accesibilidad para interactuar con el sitio                                                     |
 | PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capitulo eni                                                                              |
-| NavegacionPrincipalBase.vue | src/components/nagevacion/ | Utilizando la base de componente de navegacion, en este componente se pueden actualizar los links del menu del sitio                                                   |
+| NavegacionPrincipalBase.vue | src/components/nagevacion/ | Utilizando la base de componente de navegación, en este componente se pueden actualizar los links del menú del sitio                                                   |
 
 ### Ubicacion de los archivos
 
@@ -68,14 +67,27 @@ utilizando **solo el protocolo HTTPS**, es decir:
 git clone https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
 ```
 
-### Configuración
+### Configuración e instalación
 
 Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-base` con un proyecto de Vue general que necesita configurarse con la información particular del proyecto.
 
-1.  Cambia el nombre de la carpeta, la cuál puedes renombrar con el título de tu proyecto
-    (recuerda que es mejor no utilizar espacios ni caracteres especiales)
+1.  Cambia el nombre de la carpeta, la cual puedes renombrar con el título de tu proyecto
+    (recuerda que es mejor no utilizar espacios ni caracteres especiales).
 
-2.  Actualiza el nombre y reinicia la version en el `package.json`
+
+2. Establece la versión adecuada de npm y nvm (previamente instaladas).
+
+    ```bash
+    nvm use 18
+    ```
+
+3. Instala las dependencias de la biblioteca.
+
+    ```bash
+    npm install
+    ```
+
+4. Actualiza el nombre y reinicia la version en el `package.json`
 
     ```json
     // nombre-del-proyecto-nuevo/packaje.json
@@ -84,7 +96,7 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     "version": "0.1.0",
     ```
 
-3.  Modifica el archivo de vriables de ambiente `.env` de acuerdo a las necesidades del
+5. Modifica el archivo de variables de ambiente `.env` de acuerdo a las necesidades del
     proyecto.
     Para cada ambiente es necesario modificar el archivo de ambiente
     correspondiente, el `.env` es para el entorno local, `.env.desarrollo` para
@@ -97,33 +109,33 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     archivo de ambiente local `.env`.
 
     ```js
-    // modo el ambiente en el que se levanta el proyecto
+    // modo del ambiente en el que se levanta el proyecto
     NODE_ENV = local
 
-    // título del proyecto. este aparecerá en la pestaña del navegador
+    // título del proyecto, este aparecerá en la pestaña del navegador
     VUE_APP_TITLE = local | sisdai-proyecto-base
 
-    // descriocion del proyecto. se utiliza para agregar metadatos para le navegador
+    // descripción del proyecto, se utiliza para agregar metadatos para el navegador
     VUE_APP_DESCRIPTION = local | descripcion
 
     // el dominio en el que se verá tu proyecto
     // en un entorno local es localhost:seguido-del-puerto
-    // para el ambiente de pruenas y produccion
+    // para el ambiente de pruebas y producción
     // debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
     VUE_APP_ENI_DOMAIN = http://localhost:8080
 
     // carpeta o subcarpeta en donde se hospeda el código
-    // se agrega la / cuando el proyecto está en raís
+    // se agrega la / cuando el proyecto está en raíz
     // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar
     // ej. para https://energia.conahcyt.mx/planeas/ el es VUE_APP_BASE_ROUTE = /planeas/
     VUE_APP_BASE_ROUTE = /
 
-    // es una variable que utiliza en su configuracion Vue, normalmente es true
+    // es una variable que utiliza en su configuración Vue, normalmente es true
     VUE_APP_HASH = true
 
-    // variable para el matomo, es para trackear informacion de uso del sitio
-    // se mantiene en 0 cuando no se ha asignado un id específico para el proyecto
-    // normalmente se cambia unicamente para el ambiente de producción
+    // variable para el matomo, es para trackear información de uso del sitio
+    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto
+    // normalmente se cambia únicamente para el ambiente de producción
     // se solicita al área de infraestructura y se escribe el ID en este campo
     VUE_APP_MATOMO_SITEID = 0
 
@@ -131,14 +143,14 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     // que el Conahcyt asigno para los ENI
     // la única variante es que para entornos locales, de pruebas o de desarrollo
     // se utiliza la base https://dev-dadsig-cdn.crip.conahcyt.mx/
-    // mientras que para el entorno de produccion se utliza https://cdn.conahcyt.mx/
-    // tambien se puede utilizar esta variable con el nombre del eni y el capitulo
+    // mientras que para el entorno de producción se utliza https://cdn.conahcyt.mx/
+    // también se puede utilizar esta variable con el nombre del eni y el capítulo
     // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
     // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
-4.  Vincula tu proyecto con su repositorio
+6. Vincula tu proyecto con su repositorio
 
     Busca la url que se utilizará para clonar el proyecto nuevo y corre el siguiente comando reemplazando la `<URL_DEL_REPOSITORIO>` por la url de tu proyecto
 
@@ -146,56 +158,24 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     git remote set-url origin <URL_DEL_REPOSITORIO>
     ```
 
+7. Actualiza este README.md con la información que requiera tu proyecto
 
-5. Actualiza este README.md con la información que requiera tu proyecto
 
-### Instalación
+8. Para levantar el proyecto en local
 
-Establece la versión adecuada de npm y nvm (previamente instaladas).
+    ```bash
+    npm run dev
+   ```
 
-```bash
-nvm use 18
-```
+9. Para compilar el proyecto en desarrollo
+    ```bash
+     npm run build:dev
+    ```
 
-Instala las dependencias de la biblioteca.
-
-```bash
-npm install
-```
-
-#### Uso local
-
-- crear el `.env` en base al `.env.example`
-- instalar las dependencias
-  ```bash
-  npm install
-  ```
-- levantar el repo
-  ```bash
-  npm run dev
-  ```
-
-#### Para desarrollo - pruebas
-
-- crear el `.env.desarrollo` en base al `.env.desarrollo.example`
-- compilar el código
-  ```bash
-  npm run build:dev
-  ```
-- montar el codigo de la carpeta `dist` en el ambiente de pruebas
-- configurar las rutas en el servidor de
-  pruebas [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
-
-#### Para producción
-
-- crear el `.env.production` en base al `.env.production.example` (recuerda borrar los archivos de ejemplo una vez que tengas el definitivo)
-- compilar y minificar el código
-  ```bash
-  npm run build
-  ```
-- montar el codigo de la carpeta `dist` en el ambiente de producción
-- configurar las rutas en el servidor de
-  producción [guia vue router](https://router.vuejs.org/guide/essentials/history-mode.html#apache)
+10. Para compilar el proyecto en producción
+    ```bash
+    npm run build
+    ```
 
 
 ## Actualizaciones del sisdai-proyecto-base
@@ -255,4 +235,5 @@ el idioma español se respeta la versión original de acuerdo al proyecto
 
 Por el momento sólo quienes sean
 parte de un equipo de investigación del capítulo de un [ENI](https://eni.conahcyt.mx)
-podrán levantar issues en este repositorio. Mientras que el equipo del sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/acerca-de) se encargará de mantenerlo.
+podrán levantar issues en este repositorio. Mientras que el equipo del sistema
+de diseño [Sisdai](https://sisdai.conahcyt.mx/acerca-de) se encargará de mantenerlo.
