@@ -83,7 +83,9 @@ function moviendoFocoNavegacion(path) {
 
     <router-view />
 
-    <SisdaiMenuAccesibilidad :objetoStore="store" />
+    <!--    El menú de accesibilidad se encuentra en desarrollo, por lo que se comenta-->
+    <!--    aquí para su liberación cuando sea funcional-->
+    <!--    <SisdaiMenuAccesibilidad :objetoStore="store" />-->
     <SisdaiInfoDeDespliegue
       :versionProyecto="infoDespliegue.version_proyecto"
       :entornoProyecto="infoDespliegue.entorno_proyecto"
