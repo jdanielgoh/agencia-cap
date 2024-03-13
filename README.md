@@ -84,12 +84,21 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     "version": "0.1.0",
     ```
 
-3.  Crea el archivo `.env` en base al `.env.example`.
-    Para cada ambiente es necesario crear el archivo de ambiente correspondiente, el .env es para el entorno local, pero las variables son las mismas en todos los ambientes, únicamente se debe cuidar que valor debe tener cada una en cada caso
+3.  Modifica el archivo de vriables de ambiente `.env` de acuerdo a las necesidades del
+    proyecto.
+    Para cada ambiente es necesario modificar el archivo de ambiente
+    correspondiente, el `.env` es para el entorno local, `.env.desarrollo` para
+    un ambiente de desarrollo, y `.env.production` para un ambiente de
+    producción. Se dejan por defecto estos tres archivos en el proyecto, pero
+    pueden crearse más deacuerdo al proyecto. De la misma manera se dejan en los
+    archivos, variables de ambiente por defecto que se usan en este proyecto base y
+    que son propias de los capítulos de los ENI, sin embargo se deben agregar o
+    quitar de acuerdo al proyecto a desarrollar. Se deja aquí el ejemplo del
+    archivo de ambiente local `.env`.
 
     ```js
     // modo el ambiente en el que se levanta el proyecto
-    NODE_ENV = development
+    NODE_ENV = local
 
     // título del proyecto. este aparecerá en la pestaña del navegador
     VUE_APP_TITLE = local | sisdai-proyecto-base
