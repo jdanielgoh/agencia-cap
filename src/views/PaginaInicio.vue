@@ -17,6 +17,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.addEventListener('resize', calHeight)
 })
+
+const cdn_archivos_dominio = process.env.VUE_APP_CDN_ARCHIVOS
 </script>
 
 <template>
@@ -24,7 +26,7 @@ onBeforeUnmount(() => {
     <div class="contenedor-portada">
       <img
         class="portada"
-        src="http://placekitten.com/1280/980"
+        :src="`${cdn_archivos_dominio}sisdai/sisdai-proyecto-base/inicio/gatito-muestra.jpg`"
       />
       <div class="degradado-negro-abajo">
         <div class="contenido-abajo">

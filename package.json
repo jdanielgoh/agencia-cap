@@ -8,7 +8,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "format": "prettier . --write",
-    "format-lint": "npm run format && npm run lint"
+    "format-lint": "npm run format && npm run lint",
+    "serve:prod":"vue-cli-service serve --mode production"
   },
   "dependencies": {
     "core-js": "^3.29.1",
