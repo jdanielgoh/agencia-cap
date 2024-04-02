@@ -15,7 +15,7 @@
 
 <script setup>
 import store from '@/store'
-import { onMounted, onUpdated, watch, ref, nextTick } from 'vue'
+import { onMounted, watch, ref, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router/composables'
 const ruta = useRoute()
 const router = useRouter()
@@ -33,14 +33,8 @@ onMounted(async () => {
   await router.onReady(() => {
     ruta.path === '/' ? (entradaInicial.value = false) : null
   })
-  agregandoAriaHidden()
 })
-onUpdated(agregandoAriaHidden)
-function agregandoAriaHidden() {
-  document.querySelectorAll('span.icono-enlace-externo').forEach(el => {
-    el.setAttribute('aria-hidden', 'true')
-  })
-}
+
 // Con este watch definimos a donde se moverá el focus al cambiar de ruta
 watch(
   () => ruta.path,

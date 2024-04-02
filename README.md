@@ -19,7 +19,7 @@ en su equipo a través del **protocolo HTTPS**.
 ## Contenido del proyecto
 
 | Elemento                    | Ubicacion                  | Descripción                                                                                                                                                            |
-|-----------------------------| -------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura el matomo                                                                            |
 | App.vue                     | src/                       | Archivo con la estructura basica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
 | PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capitulo eni                                                                              |
@@ -74,20 +74,19 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
 1.  Cambia el nombre de la carpeta, la cual puedes renombrar con el título de tu proyecto
     (recuerda que es mejor no utilizar espacios ni caracteres especiales).
 
-
-2. Establece la versión adecuada de npm y nvm (previamente instaladas).
+2.  Establece la versión adecuada de npm y nvm (previamente instaladas).
 
     ```bash
     nvm use 18
     ```
 
-3. Instala las dependencias de la biblioteca.
+3.  Instala las dependencias de la biblioteca.
 
     ```bash
     npm install
     ```
 
-4. Actualiza el nombre y reinicia la version en el `package.json`
+4.  Actualiza el nombre y reinicia la version en el `package.json`
 
     ```json
     // nombre-del-proyecto-nuevo/packaje.json
@@ -96,7 +95,7 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     "version": "0.1.0",
     ```
 
-5. Modifica el archivo de variables de ambiente `.env` de acuerdo a las necesidades del
+5.  Modifica el archivo de variables de ambiente `.env` de acuerdo a las necesidades del
     proyecto.
     Para cada ambiente es necesario modificar el archivo de ambiente
     correspondiente, el `.env` es para el entorno local, `.env.desarrollo` para
@@ -150,7 +149,7 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
-6. Vincula tu proyecto con su repositorio
+6.  Vincula tu proyecto con su repositorio
 
     Busca la url que se utilizará para clonar el proyecto nuevo y corre el siguiente comando reemplazando la `<URL_DEL_REPOSITORIO>` por la url de tu proyecto
 
@@ -158,16 +157,16 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     git remote set-url origin <URL_DEL_REPOSITORIO>
     ```
 
-7. Actualiza este README.md con la información que requiera tu proyecto
+7.  Actualiza este README.md con la información que requiera tu proyecto
 
-
-8. Para levantar el proyecto en local
+8.  Para levantar el proyecto en local
 
     ```bash
     npm run dev
-   ```
+    ```
 
-9. Para compilar el proyecto en desarrollo
+9.  Para compilar el proyecto en desarrollo
+
     ```bash
      npm run build:dev
     ```
@@ -176,7 +175,6 @@ Una vez descargado el proyecto se creará una carpeta llamada `sisdai-proyecto-b
     ```bash
     npm run build
     ```
-
 
 ## Actualizaciones del sisdai-proyecto-base
 

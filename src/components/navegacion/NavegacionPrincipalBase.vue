@@ -24,16 +24,18 @@
         href="#"
         class="nav-hipervinculo"
         target="_blank"
-        ><b>IR A ENLACE EXTERNO</b></a
       >
+        <b>IR A ENLACE EXTERNO</b>
+      </a>
     </template>
     <ul class="nav-menu">
       <li>
         <a
           href="#"
           class="nav-hipervinculo"
-          >Inicio</a
         >
+          Inicio
+        </a>
       </li>
     </ul>
   </SisdaiNavegacionPrincipal>
