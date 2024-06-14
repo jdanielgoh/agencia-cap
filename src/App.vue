@@ -77,9 +77,7 @@ function moviendoFocoNavegacion(path) {
 
     <router-view />
 
-    <!--    El menú de accesibilidad se encuentra en desarrollo, por lo que se comenta-->
-    <!--    aquí para su liberación cuando sea funcional-->
-    <!--    <SisdaiMenuAccesibilidad :objetoStore="store" />-->
+    <SisdaiMenuAccesibilidad :objetoStore="store" />
     <SisdaiInfoDeDespliegue
       :versionProyecto="infoDespliegue.version_proyecto"
       :entornoProyecto="infoDespliegue.entorno_proyecto"
@@ -92,7 +90,7 @@ function moviendoFocoNavegacion(path) {
 
 <style lang="scss">
 // Estilos de la biblioteca
-@import 'node_modules/sisdai-css/src/eni.scss';
+@import 'node_modules/sisdai-css/src/sisdai.scss';
 
 .overflow-hidden {
   overflow: hidden;
