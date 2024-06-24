@@ -38,18 +38,15 @@ const cdn_archivos_dominio = process.env.VUE_APP_CDN_ARCHIVOS
 
 <template>
   <main id="principal">
-    <div class="contenedor-portada">
+    <div class="portada">
       <img
-        class="portada"
-        :src="`${cdn_archivos_dominio}sisdai/sisdai-proyecto-base/inicio/gatito-muestra.jpg`"
+        class="portada-imagen"
+        :src="`${cdn_archivos_dominio}sisdai/sisdai-proyecto-base/inicio/pekihermosa.jpg`"
+        alt="portada de ejemplo gato cálico mirando al frente"
       />
-      <div class="degradado-negro-abajo">
-        <div class="contenido-abajo">
-          <div class="contenedor ancho-lectura">
-            <h1 class="titulo-eni texto-centrado texto-color-1">
-              Título de ENI
-            </h1>
-          </div>
+      <div class="portada-degradado">
+        <div class="portada-cuerpo">
+          <p class="portada-titulo">Título de ENI</p>
         </div>
       </div>
     </div>
