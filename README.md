@@ -68,99 +68,78 @@ y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 - [npm (^10)](https://www.npmjs.com/get-npm)
 - [Vue.js (v2.7.14)](https://vuejs.org/)
 
-### Instalación
+### Instalación y vinculación con tu proyecto
 
-1. Descarga el proyecto base. Se puede clonar este proyecto en tu equipo
-   utilizando **solo el protocolo HTTPS**, es decir:
+Si tienes un repositorio de código vacío y quieres iniciar con el proyecto
+base, sigue estas instrucciones. Si ya tienes contenido en tu proyecto y
+quieres integrar el proyecto base, ve al paso 4.
 
-    ```bash
-    git clone https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
-    ```
+1. Crea una carpeta en tu local con el nombre de tu proyecto.
 
-Una vez descargado el proyecto se creará una carpeta
-llamada `sisdai-proyecto-base`.
+   ```bash
+   mkdir mi-proyecto
+   ```
 
-2. Cambia el nombre de la carpeta, la cual puedes renombrar con el título de tu
-   proyecto, por ejemplo `mi-proyecto-nuevo` (recuerda que es mejor no utilizar
-   espacios ni caracteres especiales).
+2. Sigue las instrucciones del repositorio de código donde alojarás tu proyecto,
+   para iniciarlizarlo con `git`.
 
+   ```bash
+   cd mi-proyecto
+   git init --initial-branch=main
+   ```
 
-3. Establece la versión adecuada de npm y nvm (previamente instaladas).
+3. Agrega el remoto del repositorio de código donde alojarás tu proyecto. Es
+   importante que se llame `origin` para que sea el remoto por defecto.
 
-    ```bash
-    nvm use 20
-    ```
+   ```bash
+   git remote add origin https://scm.crip.conacyt.mx/mi-proyecto.git
+   ```
 
-4. En la carpeta del proyecto instala las dependencias de la biblioteca.
-
-    ```bash
-    npm install
-    ```
-   Ahora ya puedes modificar el proyecto base de acuerdo a tus necesidades. Pero
-   será necesario que lo vincules a tu propio repositorio y lo configures.
-
-### Vinculación con tu proyecto.
-
-Si tienes un repositorio vacío y quieres subir tu contenido con el proyecto
-base:
-
-5. a. Agrega la url del _remote_ de tu repositorio vacío.
-
-    ```bash
-    git remote set-url origin <URL_DEL_REPOSITORIO>
-    ```
-   En este punto puedes hacer `git push` para subir el contenido del proyecto
-   base
-   a tu repositorio o bien modificar tu proyecto localmente y después subir
-   los cambios (ir a la sección de configuración). Recuerda que la rama
-   principal que se crea por defecto es _main_.
-   Recomendamos seguir la metodología
-   de [git flow](https://nvie.com/posts/a-successful-git-branching-model/) en
-   donde deberás crear más ramas para seguir un flujo de versionamiento
-   adecuado.
-
-Si tienes un repositorio con un proyecto de Vue con contenido y quieres
-implementar el proyecto base o bien quieres obtener actualizaciones
-del proyecto base:
-
-5. b. Agrega el sisdai-proyecto-base como repositorio remoto
+4. Agrega el remoto del proyecto base.
 
    ```bash
    git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
    ```
 
-   Configura el repositorio remoto para no bajar los tags ni heads
+   Si tecleas el comando `git remote -v` podrás ver todos las url de remotos y
+   sus nombres.
+
+
+5. Configura el repositorio remoto del sisdai para no bajar los tags ni heads
 
    ```bash
    git config remote.sisdai-proyecto-base.fetch '+refs/heads/*:refs/heads/*'
    git config remote.sisdai-proyecto-base.tagopt --no-tags
    ```
 
-   Baja los últimos cambios del sisdai-proyecto-base
+6. Baja los últimos cambios del sisdai-proyecto-base
 
    ```bash
    git pull --no-rebase sisdai-proyecto-base main --allow-unrelated-histories
    ```
 
-   Resuelve los conflictos que te marque el resultado de la instrucción
-   anterior.
-   Ahora ya puedes integrar tus cambios a otras ramas o subirlos al repositorio
-   original. Puedes borrar el _remote_ del proyecto base y conservar solamente
-   el de tu repositorio original. Estos pasos también te funcionarán para
-   obtener
-   cambios del proyecto base si los necesitas.
+7. En caso de que tengas contenido en tu proyecto, resuelve los conflictos que
+   te marque git.
+
+Ahora ya puedes integrar tus cambios a otras ramas o subirlos al repositorio
+original. Puedes borrar el _remote_ del proyecto base y conservar solamente
+el de tu repositorio original. Estos pasos también te funcionarán para
+obtener cambios del proyecto base si los necesitas.
 
 ### Configuración
 
-6. Actualiza el nombre y reinicia la version en el `package.json`
+8. Actualiza el nombre y reinicia la version en el `package.json`
 
     ```js
     // nombre-del-proyecto-nuevo/packaje.json
     "name": "nombre-del-proyecto-nuevo",
     "version": "0.1.0",
     ```
+   En este punto ya puedes subir la rama _main_ a tu repositorio de código (_origin_).
+   A partir de aquí te recomendamos seguir el [versionamiento semántico y flujo
+   entre ramas](https://codigo.conahcyt.mx/sisdai/sisdai-anexos/-/blob/main/versionamiento-semantico.md?ref_type=heads) que puedes encontrar en [sisdai-anexos](https://codigo.conahcyt.mx/sisdai/sisdai-anexos).
 
-7. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
+9. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
    necesidades del
    proyecto.
    Para cada ambiente es necesario modificar el archivo de ambiente
@@ -217,23 +196,23 @@ del proyecto base:
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
-8. Actualiza este README.md con la información que requiera tu proyecto
+10. Actualiza este README.md con la información que requiera tu proyecto
 
 ### Correr y compilar
 
-9. Para levantar el proyecto en un servidor local
+11. Para levantar el proyecto en un servidor local
 
    ```bash
    npm run dev
    ```
 
-10. Para compilar el proyecto en un ambiente de desarrollo
+12. Para compilar el proyecto en un ambiente de desarrollo
 
    ```bash
    npm run build:dev
    ```
 
-11. Para compilar el proyecto en un ambiente de producción
+13. Para compilar el proyecto en un ambiente de producción
     ```bash
     npm run build
     ```
