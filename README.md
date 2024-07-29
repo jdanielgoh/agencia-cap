@@ -106,7 +106,7 @@ base:
 
 5. a. Agrega la url del _remote_ de tu repositorio vacío.
 
-    ```
+    ```bash
     git remote set-url origin <URL_DEL_REPOSITORIO>
     ```
    En este punto puedes hacer `git push` para subir el contenido del proyecto
@@ -126,7 +126,7 @@ del proyecto base:
 5. b. Agrega el sisdai-proyecto-base como repositorio remoto
 
    ```bash
-    git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
+   git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
    ```
 
    Configura el repositorio remoto para no bajar los tags ni heads
@@ -154,7 +154,7 @@ del proyecto base:
 
 6. Actualiza el nombre y reinicia la version en el `package.json`
 
-    ```json
+    ```js
     // nombre-del-proyecto-nuevo/packaje.json
     "name": "nombre-del-proyecto-nuevo",
     "version": "0.1.0",
