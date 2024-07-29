@@ -230,7 +230,7 @@ del proyecto base:
 10. Para compilar el proyecto en un ambiente de desarrollo
 
    ```bash
-    npm run build:dev
+   npm run build:dev
    ```
 
 11. Para compilar el proyecto en un ambiente de producción
