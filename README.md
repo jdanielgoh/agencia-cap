@@ -122,13 +122,13 @@ quieres integrar el proyecto base, ve al paso 4.
    te marque git.**
 
 
-8. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo)
+7. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo)
 
     ```bash
     nvm use 20
     ```
 
-9. Instala las dependencias de la biblioteca
+8. Instala las dependencias de la biblioteca
 
     ```bash
     npm install
@@ -141,7 +141,7 @@ obtener cambios del proyecto base si los necesitas.
 
 ### Configuración
 
-10. Actualiza el nombre y reinicia la version en el `package.json`
+9. Actualiza el nombre y reinicia la version en el `package.json`
 
     ```js
     // nombre-del-proyecto-nuevo/packaje.json
@@ -152,7 +152,7 @@ obtener cambios del proyecto base si los necesitas.
    A partir de aquí te recomendamos seguir el [versionamiento semántico y flujo
    entre ramas](https://codigo.conahcyt.mx/sisdai/sisdai-anexos/-/blob/main/03_versionamiento-semantico.md?ref_type=heads) que puedes encontrar en [sisdai-anexos](https://codigo.conahcyt.mx/sisdai/sisdai-anexos).
 
-11. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
+10. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
    necesidades del
    proyecto.
    Para cada ambiente es necesario modificar el archivo de ambiente
@@ -204,23 +204,23 @@ obtener cambios del proyecto base si los necesitas.
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
-12. Actualiza este README.md con la información que requiera tu proyecto
+11. Actualiza este README.md con la información que requiera tu proyecto
 
 ### Correr y compilar
 
-13. Para levantar el proyecto en un servidor local
+12. Para levantar el proyecto en un servidor local
 
    ```bash
    npm run dev
    ```
 
-14. Para compilar el proyecto en un ambiente de desarrollo
+13. Para compilar el proyecto en un ambiente de desarrollo
 
    ```bash
    npm run build:dev
    ```
 
-15. Para compilar el proyecto en un ambiente de producción
+14. Para compilar el proyecto en un ambiente de producción
 
    ```bash
    npm run build
