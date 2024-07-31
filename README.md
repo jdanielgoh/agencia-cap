@@ -101,7 +101,7 @@ quieres integrar el proyecto base, ve al paso 4.
    git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
    ```
 
-   Si tecleas el comando `git remote -v` podrás ver todos las url de remotos y
+   Si tecleas el comando `git remote -v` podrás ver todas las url de los remotos y
    sus nombres.
 
 
@@ -118,8 +118,21 @@ quieres integrar el proyecto base, ve al paso 4.
    git pull --no-rebase sisdai-proyecto-base main --allow-unrelated-histories
    ```
 
-7. En caso de que tengas contenido en tu proyecto, resuelve los conflictos que
-   te marque git.
+   **En caso de que tengas contenido en tu proyecto, resuelve los conflictos que
+   te marque git.**
+
+
+8. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo)
+
+    ```bash
+    nvm use 20
+    ```
+
+9. Instala las dependencias de la biblioteca
+
+    ```bash
+    npm install
+    ```
 
 Ahora ya puedes integrar tus cambios a otras ramas o subirlos al repositorio
 original. Puedes borrar el _remote_ del proyecto base y conservar solamente
@@ -128,7 +141,7 @@ obtener cambios del proyecto base si los necesitas.
 
 ### Configuración
 
-8. Actualiza el nombre y reinicia la version en el `package.json`
+10. Actualiza el nombre y reinicia la version en el `package.json`
 
     ```js
     // nombre-del-proyecto-nuevo/packaje.json
@@ -137,9 +150,9 @@ obtener cambios del proyecto base si los necesitas.
     ```
    En este punto ya puedes subir la rama _main_ a tu repositorio de código (_origin_).
    A partir de aquí te recomendamos seguir el [versionamiento semántico y flujo
-   entre ramas](https://codigo.conahcyt.mx/sisdai/sisdai-anexos/-/blob/main/versionamiento-semantico.md?ref_type=heads) que puedes encontrar en [sisdai-anexos](https://codigo.conahcyt.mx/sisdai/sisdai-anexos).
+   entre ramas](https://codigo.conahcyt.mx/sisdai/sisdai-anexos/-/blob/main/03_versionamiento-semantico.md?ref_type=heads) que puedes encontrar en [sisdai-anexos](https://codigo.conahcyt.mx/sisdai/sisdai-anexos).
 
-9. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
+11. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
    necesidades del
    proyecto.
    Para cada ambiente es necesario modificar el archivo de ambiente
@@ -179,43 +192,39 @@ obtener cambios del proyecto base si los necesitas.
     // es una variable que utiliza en su configuración Vue, normalmente es true
     VUE_APP_HASH = true
 
-    // variable para el matomo, es para trackear información de uso del sitio
+    // variable para matomo (si cuentas con esta tecnoogía)
     // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto
-    // normalmente se cambia únicamente para el ambiente de producción
-    // se solicita al área de infraestructura y se escribe el ID en este campo
+    // se cambia únicamente para el ambiente de producción
     VUE_APP_MATOMO_SITEID = 0
 
     // url de la carpeta de archivos estáticos (imágenes, documentos, etc)
-    // que el Conahcyt asigno para los ENI
-    // la única variante es que para entornos locales, de pruebas o de desarrollo
-    // se utiliza la base https://dev-dadsig-cdn.crip.conahcyt.mx/
-    // mientras que para el entorno de producción se utliza https://cdn.conahcyt.mx/
-    // también se puede utilizar esta variable con el nombre del eni y el capítulo
+    // donde se alojan tus insumos si no los guardas en el front-end
     // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
     // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
-10. Actualiza este README.md con la información que requiera tu proyecto
+12. Actualiza este README.md con la información que requiera tu proyecto
 
 ### Correr y compilar
 
-11. Para levantar el proyecto en un servidor local
+13. Para levantar el proyecto en un servidor local
 
    ```bash
    npm run dev
    ```
 
-12. Para compilar el proyecto en un ambiente de desarrollo
+14. Para compilar el proyecto en un ambiente de desarrollo
 
    ```bash
    npm run build:dev
    ```
 
-13. Para compilar el proyecto en un ambiente de producción
-    ```bash
-    npm run build
-    ```
+15. Para compilar el proyecto en un ambiente de producción
+
+   ```bash
+   npm run build
+   ```
 
 En el `package.json` por defecto se incluyen otras instrucciones que te pueden
 ayudar a revisar el proyecto.
