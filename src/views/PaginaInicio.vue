@@ -41,7 +41,7 @@ const cdn_archivos_dominio = process.env.VUE_APP_CDN_ARCHIVOS
     <div class="portada">
       <img
         class="portada-imagen"
-        :src="`${cdn_archivos_dominio}sisdai/sisdai-proyecto-base/inicio/pekihermosa.jpg`"
+        :src="`${cdn_archivos_dominio}sisdai/sisdai-proyecto-base/inicio/pekihermosa.png`"
         alt="portada de ejemplo gato cálico mirando al frente"
       />
       <div class="portada-degradado">
