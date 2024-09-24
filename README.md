@@ -5,7 +5,7 @@ requerimientos mínimos para un proyecto que utilice
 el Sistema de Diseño y Accesibilidad para la
 Investigación ([Sisdai](https://sisdai.conahcyt.mx/)). En el marco del Sisdai
 también puedes consultar los [sisdai-anexos](https://codigo.conahcyt.mx/sisdai/sisdai-anexos)
-para encontrar lineamientos y recomendaciones de como documentar y/o construir un
+para encontrar lineamientos y recomendaciones de cómo documentar y/o construir un
 proyecto.
 
 Cualquier persona puede hacer uso de esta biblioteca al clonarla e instalarla
@@ -13,7 +13,7 @@ en su equipo a través del **protocolo HTTPS**.
 
 ## Acerca de este proyecto
 
-### ¿Qué utilidades contiene este proyecto?
+### ¿Qué utilidades tiene este proyecto?
 
 - Homologa los estilos utilizando el sistema de
   diseño [Sisdai](https://sisdai.conahcyt.mx/)
@@ -24,13 +24,13 @@ en su equipo a través del **protocolo HTTPS**.
 - Hace visible en ambientes de desarrollo las versiones actuales para mejorar la
   comunicación en revisiones
 - Agrega de base un menú de accesibilidad con funciones adaptadas y conectadas
-  con el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
+  con el [Sisdai](https://sisdai.conahcyt.mx/).
 
 ### Contenido del proyecto
 
 | Elemento                    | Ubicación                  | Descripción                                                                                                                                                             |
 | --------------------------- |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura matomo                                                                                |
+| main.js                     | src/                       | Archivo en donde están precargados sisdai-css y sisdai-componentes y se configura matomo                                                                                |
 | App.vue                     | src/                       | Archivo con la estructura básica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue  |
 | PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capítulo ENI                                                                               |
 | NavegacionPrincipalBase.vue | src/components/navegacion/ | Usa como base el componente de navegación de Sisdai y se edita para con las vistas que conformarán el sitio web                                                         |
@@ -140,7 +140,7 @@ obtener cambios del proyecto base si los necesitas.
 
 ### Configuración
 
-9. Actualiza el nombre y reinicia la version en el `package.json`.
+9. Actualiza el nombre y reinicia la versión en el `package.json`.
 
     ```js
     // nombre-del-proyecto-nuevo/packaje.json
@@ -162,7 +162,7 @@ obtener cambios del proyecto base si los necesitas.
    pueden crearse o eliminarse de acuerdo al mismo. También se conservan las variables de ambiente por defecto que se usan en este proyecto base
    y
    que son propias de los capítulos de los ENI, sin embargo se deben agregar o
-   quitar de acuerdo al proyecto a desarrollar.
+   quitar de acuerdo al proyecto por desarrollar.
    Ejemplo de archivo de ambiente local `.env`.
 
     ```js
