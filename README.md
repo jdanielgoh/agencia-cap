@@ -27,7 +27,7 @@ en su equipo a través del **protocolo HTTPS**.
   con el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
 
 ### Contenido del proyecto
-|
+
 | Elemento                    | Ubicación                  | Descripción                                                                                                                                                             |
 | --------------------------- |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura matomo                                                                                |
