@@ -16,24 +16,24 @@ en su equipo a través del **protocolo HTTPS**.
 ### ¿Qué utilidades contiene este proyecto?
 
 - Homologa los estilos utilizando el sistema de
-  diseño [Sisdai](https://sisdai.conahcyt.mx/).
+  diseño [Sisdai](https://sisdai.conahcyt.mx/)
 - Mejora la accesibilidad mediante el uso de html semántico y aplicando las
-  reglas establecidas en Sisdai.
+  reglas establecidas en Sisdai
 - Facilita la actualización de elementos institucionales requeridos como
-  cabeceras y pies de páginas de Gobierno de México y Conahcyt.
+  cabeceras y pies de páginas del Gobierno de México y Conahcyt
 - Hace visible en ambientes de desarrollo las versiones actuales para mejorar la
   comunicación en revisiones
 - Agrega de base un menú de accesibilidad con funciones adaptadas y conectadas
   con el sistema de diseño [Sisdai](https://sisdai.conahcyt.mx/).
 
 ### Contenido del proyecto
-
-| Elemento                    | Ubicacion                  | Descripción                                                                                                                                                            |
-| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura el matomo                                                                            |
-| App.vue                     | src/                       | Archivo con la estructura basica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
-| PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capitulo eni                                                                              |
-| NavegacionPrincipalBase.vue | src/components/nagevacion/ | Utilizando la base de componente de navegación, en este componente se pueden actualizar los links del menú del sitio                                                   |
+|
+| Elemento                    | Ubicación                  | Descripción                                                                                                                                                             |
+| --------------------------- |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura matomo                                                                                |
+| App.vue                     | src/                       | Archivo con la estructura básica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue  |
+| PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capítulo ENI                                                                               |
+| NavegacionPrincipalBase.vue | src/components/navegacion/ | Usa como base el componente de navegación de Sisdai y se edita para con las vistas que conformarán el sitio web                                                         |
 
 #### Ubicación de los archivos
 
@@ -46,7 +46,7 @@ sisdai-proyecto-base/
     │   └── navegacion
     │       └── NavegacionPrincipalBase.vue
     ├── store/
-    │   └── index.js #variables accesibilidad
+    │   └── index.js #variables de accesibilidad
     └── views/
         └── PaginaInicio.vue
 ```
@@ -55,11 +55,11 @@ sisdai-proyecto-base/
 
 ### Pasos previos recomendados
 
-Para desarrollar este proyecto se usó [node.js](https://nodejs.org/en) como
+Para desarrollar este proyecto se usa [node.js](https://nodejs.org/en) como
 entorno de ejecución de JavaScript. La opción recomendada para instalarlo es
 [vía nvm](https://github.com/nvm-sh/nvm) que es el manejador de versiones de
 node. Siguiendo este camino, también se instalará el manejador de paquetes
-[npm](https://www.npmjs.com/). Dado lo anterior las instrucciones de instalación
+[npm](https://www.npmjs.com/). Las instrucciones de instalación
 y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 
 ### Dependencias
@@ -80,16 +80,15 @@ quieres integrar el proyecto base, ve al paso 4.
    mkdir mi-proyecto
    ```
 
-2. Sigue las instrucciones del repositorio de código donde alojarás tu proyecto,
-   para iniciarlizarlo con `git`.
+2. Sigue las instrucciones del repositorio de código donde alojarás tu proyecto. Inicia tu proyecto con `git`.
 
    ```bash
    cd mi-proyecto
    git init --initial-branch=main
    ```
 
-3. Agrega el remoto del repositorio de código donde alojarás tu proyecto. Es
-   importante que se llame `origin` para que sea el remoto por defecto.
+3. Agrega el _remote_ del repositorio de código donde alojarás tu proyecto. Es
+   importante que se llame `origin` para que sea el _remote_ por defecto.
 
    ```bash
    git remote add origin https://scm.crip.conacyt.mx/mi-proyecto.git
@@ -101,34 +100,34 @@ quieres integrar el proyecto base, ve al paso 4.
    git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
    ```
 
-   Si tecleas el comando `git remote -v` podrás ver todas las url de los remotos y
+   Si tecleas el comando `git remote -v` podrás ver todas las url de los _remote_ y
    sus nombres.
 
 
-5. Configura el repositorio remoto del sisdai para no bajar los tags ni heads
+5. Configura el _remote_ del repositorio del Sisdai para no bajar los _tags_ ni _heads_.
 
    ```bash
    git config remote.sisdai-proyecto-base.fetch '+refs/heads/*:refs/heads/*'
    git config remote.sisdai-proyecto-base.tagopt --no-tags
    ```
 
-6. Baja los últimos cambios del sisdai-proyecto-base
+6. Baja los últimos cambios del sisdai-proyecto-base.
 
    ```bash
    git pull --no-rebase sisdai-proyecto-base main --allow-unrelated-histories
    ```
 
    **En caso de que tengas contenido en tu proyecto, resuelve los conflictos que
-   te marque git.**
+   te marque git en tu terminal.**
 
 
-7. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo)
+7. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo).
 
     ```bash
     nvm use 20
     ```
 
-8. Instala las dependencias de la biblioteca
+8. Instala las dependencias de la biblioteca.
 
     ```bash
     npm install
@@ -141,7 +140,7 @@ obtener cambios del proyecto base si los necesitas.
 
 ### Configuración
 
-9. Actualiza el nombre y reinicia la version en el `package.json`
+9. Actualiza el nombre y reinicia la version en el `package.json`.
 
     ```js
     // nombre-del-proyecto-nuevo/packaje.json
@@ -160,67 +159,63 @@ obtener cambios del proyecto base si los necesitas.
    un ambiente de desarrollo, `.env.preproduccion` para un ambiente de
    preproducción, y `.env.production` para un ambiente de
    producción. Se dejan por defecto estos cuatro archivos en el proyecto, pero
-   pueden crearse o eliminarse de acuerdo al mismo. También se dejan en los
-   archivos, variables de ambiente por defecto que se usan en este proyecto base
+   pueden crearse o eliminarse de acuerdo al mismo. También se conservan las variables de ambiente por defecto que se usan en este proyecto base
    y
    que son propias de los capítulos de los ENI, sin embargo se deben agregar o
-   quitar de acuerdo al proyecto a desarrollar. Se deja aquí el ejemplo del
-   archivo de ambiente local `.env`.
+   quitar de acuerdo al proyecto a desarrollar.
+   Ejemplo de archivo de ambiente local `.env`.
 
     ```js
     // modo del ambiente en el que se levanta el proyecto
     NODE_ENV = local
 
-    // título del proyecto, este aparecerá en la pestaña del navegador
+    // título del proyecto, éste aparecerá en la pestaña del navegador
     VUE_APP_TITLE = local | sisdai-proyecto-base
 
-    // descripción del proyecto, se utiliza para agregar metadatos para el navegador
+    // descripción del proyecto, se utiliza para agregar metadatos en el navegador
     VUE_APP_DESCRIPTION = local | descripcion
 
-    // el dominio en el que se verá tu proyecto
+    // el dominio en el que se verá tu proyecto,
     // en un entorno local es localhost:seguido-del-puerto
-    // para el ambiente de pruebas y producción
-    // debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
-    VUE_APP_ENI_DOMAIN = http://localhost:8080
+    // para el ambiente de pruebas y producción debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
+    VUE_APP_ENI_DOMAIN = https://localhost:8080
 
-    // carpeta o subcarpeta en donde se hospeda el código
-    // se agrega la / cuando el proyecto está en raíz
-    // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar
-    // ej. para https://energia.conahcyt.mx/planeas/ el es VUE_APP_BASE_ROUTE = /planeas/
+    // carpeta o subcarpeta en donde se hospeda el código,
+    // se agrega la / cuando el proyecto está en raíz, pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar el nombre del capítulo en formato corto
+    // ejemplo: para https://energia.conahcyt.mx/planeas/ el VUE_APP_BASE_ROUTE = /planeas/
     VUE_APP_BASE_ROUTE = /
 
     // es una variable que utiliza en su configuración Vue, normalmente es true
     VUE_APP_HASH = true
 
-    // variable para matomo (si cuentas con esta tecnoogía)
-    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto
+    // variable para matomo (si cuentas con esta tecnología),
+    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto,
     // se cambia únicamente para el ambiente de producción
     VUE_APP_MATOMO_SITEID = 0
 
-    // url de la carpeta de archivos estáticos (imágenes, documentos, etc)
-    // donde se alojan tus insumos si no los guardas en el front-end
+    // url de la carpeta de archivos estáticos (imágenes, documentos, etc) donde se alojan tus insumos si no los guardas en el front-end,
     // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
     // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
     VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
     ```
 
-11. Actualiza este README.md con la información que requiera tu proyecto
+11. Actualiza este README.md con la información que requiera tu proyecto.
 
 ### Correr y compilar
 
-12. Para levantar el proyecto en un servidor local
+12. Para levantar el proyecto en un servidor local.
 
    ```bash
    npm run dev
    ```
 
-13. Para compilar el proyecto en un ambiente de desarrollo
+13. Para compilar el proyecto en un ambiente de desarrollo.
 
    ```bash
    npm run build:dev
    ```
 
-14. Para compilar el proyecto en un ambiente de producción
+14. Para compilar el proyecto en un ambiente de producción.
 
    ```bash
    npm run build
@@ -255,7 +250,7 @@ artículo 63 se explicita que "cuando se trate
 de desarrollos basados en software libre, se respetarán las condiciones de su
 licenciamiento original [...]".
 
-Considerando lo anterior sisdai-proyecto-base se publica bajo la licencia
+Considerando lo anterior, sisdai-proyecto-base se publica bajo la licencia
 [LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.html). Dicha licencia se puede
 consultar en el archivo _LICENSE_ de este repositorio.
 Esta licencia se encuentra disponible en inglés porque aunque el Sisdai
@@ -268,6 +263,5 @@ el idioma español se respeta la versión original de acuerdo al proyecto
 Por el momento sólo quienes sean
 parte de un equipo de investigación del capítulo de
 un [ENI](https://eni.conahcyt.mx)
-podrán levantar issues en este repositorio. Mientras que el equipo del sistema
-de diseño [Sisdai](https://sisdai.conahcyt.mx/acerca-de) se encargará de
+podrán levantar issues en este repositorio. El equipo del [Sisdai](https://sisdai.conahcyt.mx/acerca-de) se encargará de
 mantenerlo.
