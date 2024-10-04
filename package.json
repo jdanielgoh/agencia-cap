@@ -1,19 +1,17 @@
 {
   "name": "sisdai-proyecto-base",
-  "version": "3.0.0-alpha.0",
+  "version": "3.0.0-alpha.1",
   "private": true,
   "type": "module",
   "license": "LGPL-3.0-only",
   "scripts": {
     "clean": "rm -rf node_modules && rm package-lock.json && npm cache clean -f && npm cache verify && npm i",
-    "dev": "vite",
-    "build:dev": "vue-cli-service build --mode desarrollo",
-    "build": "vite build",
-    "lint": "vue-cli-service lint",
-    "format": "prettier . --write",
-    "format-lint": "npm run format && npm run lint",
-    "serve:prod": "vue-cli-service serve --mode production",
-    "preview": "vite preview"
+    "dev": "NODE_ENV=development vite --mode desarrollo",
+    "dev:pp": "NODE_ENV=development vite --mode preproduccion",
+    "dev:prod": "NODE_ENV=production vite --mode produccion",
+    "build:dev": "NODE_ENV=development vite build --mode desarrollo",
+    "build:pp": "NODE_ENV=development vite build --mode preproduccion",
+    "build": "NODE_ENV=production vite build --mode produccion"
   },
   "dependencies": {
     "pinia": "^2.1.7",

@@ -45,8 +45,6 @@ sisdai-proyecto-base/
     ├── components/
     │   └── navegacion
     │       └── NavegacionPrincipalBase.vue
-    ├── store/
-    │   └── index.js #variables de accesibilidad
     └── views/
         └── PaginaInicio.vue
 ```
@@ -66,7 +64,7 @@ y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 
 - [node.js (^20)](https://nodejs.org/en/download/)
 - [npm (^10)](https://www.npmjs.com/get-npm)
-- [Vue.js (v2.7.14)](https://vuejs.org/)
+- [Vue.js (^3.4.29)](https://vuejs.org/)
 
 ### Instalación y vinculación con tu proyecto
 
@@ -157,7 +155,7 @@ obtener cambios del proyecto base si los necesitas.
    Para cada ambiente es necesario modificar el archivo de ambiente
    correspondiente, el `.env` es para el entorno local, `.env.desarrollo` para
    un ambiente de desarrollo, `.env.preproduccion` para un ambiente de
-   preproducción, y `.env.production` para un ambiente de
+   preproducción, y `.env.produccion` para un ambiente de
    producción. Se dejan por defecto estos cuatro archivos en el proyecto, pero
    pueden crearse o eliminarse de acuerdo al mismo. También se conservan las variables de ambiente por defecto que se usan en este proyecto base
    y
@@ -166,37 +164,46 @@ obtener cambios del proyecto base si los necesitas.
    Ejemplo de archivo de ambiente local `.env`.
 
     ```js
-    // modo del ambiente en el que se levanta el proyecto
-    NODE_ENV = local
+    // variable para matomo (si cuentas con esta tecnología),
+    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto,
+    // se cambia únicamente para el ambiente de producción
+    VITE_MATOMO_ID = 0 
 
     // título del proyecto, éste aparecerá en la pestaña del navegador
-    VUE_APP_TITLE = local | sisdai-proyecto-base
-
+    VITE_TITULO = Título del proyecto
+    
     // descripción del proyecto, se utiliza para agregar metadatos en el navegador
-    VUE_APP_DESCRIPTION = local | descripcion
+    VITE_DESCRIPCION = Descripción del proyecto
+
+    // palabras clave del proyecto, se utiliza para que los buscadores indexen el proyecto con estas etiquetas para mejorar las busquedas en los motores como Google
+    VITE_PALABRAS_CLAVE = palabras, clave, separadas, por, coma
+
+    // url completa de donde se encuentra la imagen que se utilizará como portada a la hora de compartir en redes sociales
+    VITE_IMAGEN = https://dominio.mx/archivo-imagen-para-compartir.jpg
+
+    // para cuando el proyecto viene de otro proyecto más grande, por ejemplo un ENI, aqui va el nombre del ENI en particular
+    VITE_PROYECTO_MADRE = 
 
     // el dominio en el que se verá tu proyecto,
     // en un entorno local es localhost:seguido-del-puerto
     // para el ambiente de pruebas y producción debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
-    VUE_APP_ENI_DOMAIN = https://localhost:8080
+    VITE_DOMINIO = http://localhost:5173
 
     // carpeta o subcarpeta en donde se hospeda el código,
-    // se agrega la / cuando el proyecto está en raíz, pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar el nombre del capítulo en formato corto
-    // ejemplo: para https://energia.conahcyt.mx/planeas/ el VUE_APP_BASE_ROUTE = /planeas/
-    VUE_APP_BASE_ROUTE = /
-
-    // es una variable que utiliza en su configuración Vue, normalmente es true
-    VUE_APP_HASH = true
-
-    // variable para matomo (si cuentas con esta tecnología),
-    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto,
-    // se cambia únicamente para el ambiente de producción
-    VUE_APP_MATOMO_SITEID = 0
+    // se agrega la / cuando el proyecto está en raíz, 
+    // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar el nombre del capítulo en formato corto
+    // ejemplo: para https://energia.conahcyt.mx/planeas/ el VITE_URL_BASE = /planeas/
+    VITE_URL_BASE = /
 
     // url de la carpeta de archivos estáticos (imágenes, documentos, etc) donde se alojan tus insumos si no los guardas en el front-end,
     // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
     // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
-    VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+    VITE_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+
+    // metadato para decirle a los bots si se puede indexar la página 
+    // ej. en desarrollo: noindex, nofollow
+    // ej. en produccion: index, follow
+    VITE_INDEXACION = index, follow
     ```
 
 11. Actualiza este README.md con la información que requiera tu proyecto.
@@ -208,14 +215,30 @@ obtener cambios del proyecto base si los necesitas.
    ```bash
    npm run dev
    ```
+13. Para levantar el proyecto en un servidor local en modo de preproducción.
 
-13. Para compilar el proyecto en un ambiente de desarrollo.
+   ```bash
+   npm run dev:pp
+   ```
+14. Para levantar el proyecto en un servidor local en modo de producción.
+
+   ```bash
+   npm run dev:prod
+   ```
+
+15. Para compilar el proyecto en un ambiente de desarrollo.
 
    ```bash
    npm run build:dev
    ```
 
-14. Para compilar el proyecto en un ambiente de producción.
+16. Para compilar el proyecto en un ambiente de preproducción.
+
+   ```bash
+   npm run build:pp
+   ```
+
+17. Para compilar el proyecto en un ambiente de producción.
 
    ```bash
    npm run build
