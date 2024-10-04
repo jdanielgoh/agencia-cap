@@ -27,9 +27,6 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "vite": "^5.3.1"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "repository": {
     "type": "git",
     "url": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base"
