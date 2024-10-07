@@ -1,7 +1,7 @@
 {
   "recommendations": [
-    "octref.vetur",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
   ]
 }
