@@ -252,6 +252,12 @@ La licencia incluída aquí es únicamente para sisdai-proyecto-base. Una vez
 que tengas tu propio proyecto deberás modificar la licencia de acuerdo con
 los lineamientos del proyecto [GNU](https://www.gnu.org/licenses/licenses.html).
 
+## Linter del código
+
+Para garantizar el buen funcionamiento y cumplimiento de buenas prácticas de
+código se implementó un linter en este proyecto base. La documentación del mismo
+la puedes encontrar en el archivo [linter.md](./linter.md).
+
 ## Licencia
 
 **SOFTWARE LIBRE Y ESTÁNDARES ABIERTOS**
