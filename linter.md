@@ -62,15 +62,20 @@ Visita [prettier/eslint-config-prettier](https://github.com/prettier/eslint-conf
 npm run lint
 ```
 
-### Git hook
+### LintStaged y Husky
 
-Se hailitó con husky un paso de verificación de `prettier` y `eslint` antes de hacer un `commit` de código al repositorio
+Se hailitó una tarea de verificación que sucede al momento de hacer un `commit`.
 
-- Se instaló e inicializó con:
+- Se instalaron las bibliotecas requeridas con:
 
 ```sh
 npm install --save-dev husky lint-staged
+```
+
+- Se inicializó la tarea con:
+
+```sh
 npx husky init
 ```
 
-- Se configuró en la carpeta de `.husky` que se crea durante la instalación, el archivo de pre-commit con el comando del verificación de código `format-lint`
+- Se configuró el archivo `.husky/pre-commit` para que corra el comando `format-lint` del proyecto
