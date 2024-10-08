@@ -28,12 +28,15 @@ en su equipo a través del **protocolo HTTPS**.
 
 ### Contenido del proyecto
 
-| Elemento                    | Ubicación                  | Descripción                                                                                                                                                             |
-| --------------------------- |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| main.js                     | src/                       | Archivo en donde están precargados sisdai-css y sisdai-componentes y se configura matomo                                                                                |
-| App.vue                     | src/                       | Archivo con la estructura básica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue  |
-| PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capítulo ENI                                                                               |
-| NavegacionPrincipalBase.vue | src/components/navegacion/ | Usa como base el componente de navegación de Sisdai y se edita para con las vistas que conformarán el sitio web                                                         |
+| Elemento                    | Ubicación                  | Descripción                                                                                                                                                            |
+| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| main.js                     | src/                       | Archivo en donde están precargados sisdai-css y sisdai-componentes y se configura matomo                                                                               |
+| App.vue                     | src/                       | Archivo con la estructura básica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
+| index.js                    | src/router/                | Archivo en donde se escriben todas las rutas que tiene el sitio, el path que aparecera en la url, el título de la página y el archivo que contiene la vista            |
+| PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capítulo ENI                                                                              |
+| ErrorPaginaNoEncontrada.vue | src/views/                 | Vista en Vue de ejemplo para cuando se escribe una ruto que no existe                                                                                                  |
+| OtraVista.vue               | src/views/                 | Vista en Vue vacía como base para agregar una vista al sitio                                                                                                           |
+| NavegacionPrincipalBase.vue | src/components/navegacion/ | Usa como base el componente de navegación de Sisdai y se edita para con las vistas que conformarán el sitio web                                                        |
 
 #### Ubicación de los archivos
 
@@ -42,13 +45,15 @@ sisdai-proyecto-base/
 └── src/
     ├── main.js
     ├── App.vue
-    ├── components/
-    │   └── navegacion
-    │       └── NavegacionPrincipalBase.vue
-    ├── store/
-    │   └── index.js #variables de accesibilidad
-    └── views/
-        └── PaginaInicio.vue
+    ├── router/
+    │   └── index.js
+    ├── views/
+    │   ├── PaginaInicio.vue
+    │   ├── ErrorPaginaNoEncontrada.vue
+    │   └── OtraVista.vue
+    └── components/
+        └── navegacion
+            └── NavegacionPrincipalBase.vue
 ```
 
 ## Instalación y uso
@@ -66,173 +71,157 @@ y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 
 - [node.js (^20)](https://nodejs.org/en/download/)
 - [npm (^10)](https://www.npmjs.com/get-npm)
-- [Vue.js (v2.7.14)](https://vuejs.org/)
+- [Vue.js (^3.4.29)](https://vuejs.org/)
 
-### Instalación y vinculación con tu proyecto
+### Instalación
 
 Si tienes un repositorio de código vacío y quieres iniciar con el proyecto
 base, sigue estas instrucciones. Si ya tienes contenido en tu proyecto y
 quieres integrar el proyecto base, ve al paso 4.
 
-1. Crea una carpeta en tu local con el nombre de tu proyecto.
+1. Descarga el proyecto.
 
    ```bash
-   mkdir mi-proyecto
+
    ```
 
-2. Sigue las instrucciones del repositorio de código donde alojarás tu proyecto. Inicia tu proyecto con `git`.
+2. Cambia el nombre de la carpeta por el nombre de tu proyecto
 
    ```bash
-   cd mi-proyecto
-   git init --initial-branch=main
+
    ```
 
-3. Agrega el _remote_ del repositorio de código donde alojarás tu proyecto. Es
-   importante que se llame `origin` para que sea el _remote_ por defecto.
+3. Actualiza el nombre y reinicia la versión en el `package.json`.
+
+   ```js
+   // nombre-del-proyecto-nuevo/packaje.json
+   "name": "nombre-del-proyecto-nuevo",
+   "version": "0.1.0",
+   ```
+
+4. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo).
 
    ```bash
-   git remote add origin https://scm.crip.conacyt.mx/mi-proyecto.git
+   nvm use 20
    ```
 
-4. Agrega el remoto del proyecto base.
+5. Instala las dependencias del proyecto.
 
    ```bash
-   git remote add sisdai-proyecto-base https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base.git
+   npm install
    ```
-
-   Si tecleas el comando `git remote -v` podrás ver todas las url de los _remote_ y
-   sus nombres.
-
-
-5. Configura el _remote_ del repositorio del Sisdai para no bajar los _tags_ ni _heads_.
-
-   ```bash
-   git config remote.sisdai-proyecto-base.fetch '+refs/heads/*:refs/heads/*'
-   git config remote.sisdai-proyecto-base.tagopt --no-tags
-   ```
-
-6. Baja los últimos cambios del sisdai-proyecto-base.
-
-   ```bash
-   git pull --no-rebase sisdai-proyecto-base main --allow-unrelated-histories
-   ```
-
-   **En caso de que tengas contenido en tu proyecto, resuelve los conflictos que
-   te marque git en tu terminal.**
-
-
-7. Establece la versión adecuada de npm y nvm (previamente instaladas en tu equipo).
-
-    ```bash
-    nvm use 20
-    ```
-
-8. Instala las dependencias de la biblioteca.
-
-    ```bash
-    npm install
-    ```
-
-Ahora ya puedes integrar tus cambios a otras ramas o subirlos al repositorio
-original. Puedes borrar el _remote_ del proyecto base y conservar solamente
-el de tu repositorio original. Estos pasos también te funcionarán para
-obtener cambios del proyecto base si los necesitas.
 
 ### Configuración
 
-9. Actualiza el nombre y reinicia la versión en el `package.json`.
+6.  Modifica el archivo de variables de ambiente `.env` de acuerdo a las
+    necesidades del
+    proyecto.
+    Para cada ambiente es necesario modificar el archivo de ambiente
+    correspondiente, el `.env` es para el entorno local, `.env.desarrollo` para
+    un ambiente de desarrollo, `.env.preproduccion` para un ambiente de
+    preproducción, y `.env.produccion` para un ambiente de
+    producción. Se dejan por defecto estos cuatro archivos en el proyecto, pero
+    pueden crearse o eliminarse de acuerdo al mismo. También se conservan las variables de ambiente por defecto que se usan en este proyecto base
+    y
+    que son propias de los capítulos de los ENI, sin embargo se deben agregar o
+    quitar de acuerdo al proyecto por desarrollar.
+    Ejemplo de archivo de ambiente local `.env`.
 
     ```js
-    // nombre-del-proyecto-nuevo/packaje.json
-    "name": "nombre-del-proyecto-nuevo",
-    "version": "0.1.0",
-    ```
-   En este punto ya puedes subir la rama _main_ a tu repositorio de código (_origin_).
-   A partir de aquí te recomendamos seguir el [versionamiento semántico y flujo
-   entre ramas](https://codigo.conahcyt.mx/sisdai/sisdai-anexos/-/blob/main/03_versionamiento-semantico.md?ref_type=heads) que puedes encontrar en [sisdai-anexos](https://codigo.conahcyt.mx/sisdai/sisdai-anexos).
-
-10. Modifica el archivo de variables de ambiente `.env` de acuerdo a las
-   necesidades del
-   proyecto.
-   Para cada ambiente es necesario modificar el archivo de ambiente
-   correspondiente, el `.env` es para el entorno local, `.env.desarrollo` para
-   un ambiente de desarrollo, `.env.preproduccion` para un ambiente de
-   preproducción, y `.env.production` para un ambiente de
-   producción. Se dejan por defecto estos cuatro archivos en el proyecto, pero
-   pueden crearse o eliminarse de acuerdo al mismo. También se conservan las variables de ambiente por defecto que se usan en este proyecto base
-   y
-   que son propias de los capítulos de los ENI, sin embargo se deben agregar o
-   quitar de acuerdo al proyecto por desarrollar.
-   Ejemplo de archivo de ambiente local `.env`.
-
-    ```js
-    // modo del ambiente en el que se levanta el proyecto
-    NODE_ENV = local
+    // variable para matomo (si cuentas con esta tecnología),
+    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto,
+    // se cambia únicamente para el ambiente de producción
+    VITE_MATOMO_ID = 0
 
     // título del proyecto, éste aparecerá en la pestaña del navegador
-    VUE_APP_TITLE = local | sisdai-proyecto-base
+    VITE_TITULO = Título del proyecto
 
     // descripción del proyecto, se utiliza para agregar metadatos en el navegador
-    VUE_APP_DESCRIPTION = local | descripcion
+    VITE_DESCRIPCION = Descripción del proyecto
+
+    // palabras clave del proyecto, se utiliza para que los buscadores indexen el proyecto con estas etiquetas para mejorar las busquedas en los motores como Google
+    VITE_PALABRAS_CLAVE = palabras, clave, separadas, por, coma
+
+    // url completa de donde se encuentra la imagen que se utilizará como portada a la hora de compartir en redes sociales
+    VITE_IMAGEN = https://dominio.mx/archivo-imagen-para-compartir.jpg
+
+    // para cuando el proyecto viene de otro proyecto más grande, por ejemplo un ENI, aqui va el nombre del ENI en particular
+    VITE_PROYECTO_MADRE =
 
     // el dominio en el que se verá tu proyecto,
     // en un entorno local es localhost:seguido-del-puerto
     // para el ambiente de pruebas y producción debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
-    VUE_APP_ENI_DOMAIN = https://localhost:8080
+    VITE_DOMINIO = http://localhost:5173
 
     // carpeta o subcarpeta en donde se hospeda el código,
-    // se agrega la / cuando el proyecto está en raíz, pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar el nombre del capítulo en formato corto
-    // ejemplo: para https://energia.conahcyt.mx/planeas/ el VUE_APP_BASE_ROUTE = /planeas/
-    VUE_APP_BASE_ROUTE = /
-
-    // es una variable que utiliza en su configuración Vue, normalmente es true
-    VUE_APP_HASH = true
-
-    // variable para matomo (si cuentas con esta tecnología),
-    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto,
-    // se cambia únicamente para el ambiente de producción
-    VUE_APP_MATOMO_SITEID = 0
+    // se agrega la / cuando el proyecto está en raíz,
+    // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar el nombre del capítulo en formato corto
+    // ejemplo: para https://energia.conahcyt.mx/planeas/ el VITE_URL_BASE = /planeas/
+    VITE_URL_BASE = /
 
     // url de la carpeta de archivos estáticos (imágenes, documentos, etc) donde se alojan tus insumos si no los guardas en el front-end,
     // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
     // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
-    VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+    VITE_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+
+    // metadato para decirle a los bots si se puede indexar la página
+    // ej. en desarrollo: noindex, nofollow
+    // ej. en produccion: index, follow
+    VITE_INDEXACION = index, follow
     ```
 
-11. Actualiza este README.md con la información que requiera tu proyecto.
+7.  Actualiza este README.md con la información que requiera tu proyecto.
+
+8.  Actualiza la licencia de tu proyecto. La licencia incluída aquí es únicamente para sisdai-proyecto-base. Una vez
+    que tengas tu propio proyecto deberás modificar la licencia de acuerdo con
+    los lineamientos del proyecto [GNU](https://www.gnu.org/licenses/licenses.html).
 
 ### Correr y compilar
 
-12. Para levantar el proyecto en un servidor local.
+Para levantar el proyecto en un servidor local.
 
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
-13. Para compilar el proyecto en un ambiente de desarrollo.
+Para levantar el proyecto en un servidor local en modo de preproducción.
 
-   ```bash
-   npm run build:dev
-   ```
+```bash
+npm run dev:pp
+```
 
-14. Para compilar el proyecto en un ambiente de producción.
+Para levantar el proyecto en un servidor local en modo de producción.
 
-   ```bash
-   npm run build
-   ```
+```bash
+npm run dev:prod
+```
+
+Para compilar el proyecto en un ambiente de desarrollo.
+
+```bash
+npm run build:dev
+```
+
+Para compilar el proyecto en un ambiente de preproducción.
+
+```bash
+npm run build:pp
+```
+
+Para compilar el proyecto en un ambiente de producción.
+
+```bash
+npm run build
+```
 
 En el `package.json` por defecto se incluyen otras instrucciones que te pueden
 ayudar a revisar el proyecto.
-
-La licencia incluída aquí es únicamente para sisdai-proyecto-base. Una vez
-que tengas tu propio proyecto deberás modificar la licencia de acuerdo con
-los lineamientos del proyecto [GNU](https://www.gnu.org/licenses/licenses.html).
 
 ## Linter del código
 
 Para garantizar el buen funcionamiento y cumplimiento de buenas prácticas de
 código se implementó un linter en este proyecto base. La documentación del mismo
-la puedes encontrar en el archivo `linter.md`.
+la puedes encontrar en el archivo [linter.md](./linter.md).
 
 ## Licencia
 
