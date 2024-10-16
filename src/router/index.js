@@ -23,6 +23,16 @@ const router = createRouter({
       component: PaginaInicio,
     },
     {
+      path: '/creditos',
+      name: 'Créditos',
+      component: () => import('@/views/PaginaCreditos.vue'),
+    },
+    {
+      path: '/creditos/:id',
+      name: 'Créditos / Investigadora',
+      component: () => import('@/views/PaginaInvestigadora.vue'),
+    },
+    {
       path: '/otra-vista',
       name: 'Otra Vista',
       component: () => import('@/views/OtraVista.vue'),
