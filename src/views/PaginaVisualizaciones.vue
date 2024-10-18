@@ -6,6 +6,6 @@
     class="contenedor"
     id="principal"
   >
-    <h1>Otra vista</h1>
+    <h1>Visualizaciones</h1>
   </main>
 </template>
