@@ -27,10 +27,11 @@ app.use(createPinia())
 app.use(router)
 app.use(SisdaiComponentes)
 
-if (parseInt(import.meta.env.VITE_MATOMO_ID) !== 0) {
+const idMatomo = Number(import.meta.env.VITE_MATOMO_ID)
+if (idMatomo !== 0 || Number.isNaN(idMatomo)) {
   app.use(VueMatomo, {
     host: 'https://retru.conacyt.mx/',
-    siteId: parseInt(import.meta.env.VITE_MATOMO_ID),
+    siteId: idMatomo,
     trackerFileName: 'matomo',
     router: router,
     enableLinkTracking: true,
