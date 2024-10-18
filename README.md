@@ -29,7 +29,7 @@ en su equipo a través del **protocolo HTTPS**.
 ### Contenido del proyecto
 
 | Elemento                    | Ubicación                  | Descripción                                                                                                                                                            |
-|-----------------------------| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | main.js                     | src/                       | Archivo en donde están precargados sisdai-css y sisdai-componentes y se configura matomo                                                                               |
 | App.vue                     | src/                       | Archivo con la estructura básica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
 | index.js                    | src/router/                | Archivo en donde se escriben todas las rutas que tiene el sitio, el path que aparecera en la url, el título de la página y el archivo que contiene la vista            |
