@@ -23,6 +23,11 @@ const router = createRouter({
       component: PaginaInicio,
     },
     {
+      path: '/visualizaciones',
+      name: 'Visualizaciones',
+      component: () => import('@/views/PaginaVisualizaciones.vue'),
+    },
+    {
       path: '/creditos',
       name: 'Créditos',
       component: () => import('@/views/PaginaCreditos.vue'),
@@ -35,7 +40,7 @@ const router = createRouter({
     {
       path: '/otra-vista',
       name: 'Otra Vista',
-      component: () => import('@/views/OtraVista.vue'),
+      component: () => import('@/views/PaginaOtraVista.vue'),
     },
     {
       path: '/:pathMatch(.*)*',
