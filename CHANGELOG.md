@@ -24,7 +24,6 @@ y este proyecto se adhiere al [Versionamiento semántico](https://semver.org/spe
 
 - Identidad gráfica del gobierno federal para el periodo 2024-2030
 
-
 ## [2.3.0] - 2024-10-17
 
 Versión deprecada con Vue 2
@@ -51,7 +50,6 @@ Identidad gráfica del gobierno federal para el periodo 2018-2024
 
 - Nombre de **sisdai-proyecto-base** por **eni-capitulo-demo**
 - Enlaces a MinIO
-
 
 [3.0.0]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.0.0...v2.3.0
 [2.3.0]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v2.3.0...v2.2.0
