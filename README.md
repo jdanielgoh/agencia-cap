@@ -1,25 +1,3 @@
-### <span style="color:red">IMPORTANTE</span>
-
-**Esta es una versión deprecada del capítulo demo por lo que ya no se le da
-mantenimiento. Es responsabilidad de la persona usuaria estar al tanto de los
-cambios en las bibliotecas del Sisdai, consultado los releases y/o CHANGELOG.md
-de los repositorios.**
-
-**Contenido de esta versión**
-
-- Hecha en Vue 3
-- Identidad gráfica del gobierno federal para el periodo 2018-2024
-- Vista de visualizaciones
-- Vista de Créditos
-- Vista de Investigadoras
-- Vista de ejemplo vacía
-- Menú de accesibilidad
-
-**Para consultar cambios y actualizaciones de este proyecto ir al archivo
-CHANGELOG.md**
-
-<hr>
-
 # eni-capitulo-demo
 
 Este repositorio contiene el proyecto base para levantar una página web con los
@@ -32,6 +10,9 @@ proyecto.
 
 Cualquier persona puede hacer uso de esta biblioteca al clonarla e instalarla
 en su equipo a través del **protocolo HTTPS**.
+
+**Para consultar cambios y actualizaciones de este proyecto ir al archivo
+CHANGELOG.md**
 
 ## Acerca de este proyecto
 
