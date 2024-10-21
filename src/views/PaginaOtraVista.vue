@@ -1,8 +1,10 @@
+<script setup></script>
+
 <template>
   <main
     class="contenedor"
     id="principal"
   >
-    <h1>Página no encontrada</h1>
+    <h1>Otra vista</h1>
   </main>
 </template>
