@@ -29,7 +29,7 @@ const lasBarras = ref()
         >. Te invitamos a conocer la biblioteca y su documentación para saber
         como construir gráficas más complejas y/o de otro tipo.
       </p>
-      <div class="contenedor ancho-lectura">
+      <div class="contenedor ancho-lectura m-b-6">
         <SisdaiGraficas
           :titulo_eje_y="'Título de eje Y'"
           :titulo_eje_x="'Título de eje X'"
