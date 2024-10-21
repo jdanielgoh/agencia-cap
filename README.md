@@ -107,7 +107,7 @@ quieres integrar el capítulo demo, ve al paso 4.
 4. Agrega el remoto del capítulo demo.
 
    ```bash
-   git remote add eni-capitulo-demo https://codigo.conahcyt.mx/sisdai/eni-capitulo-demo.git
+   git remote add eni-capitulo-demo https://codigo.conahcyt.mx/eni/eni-capitulo-demo.git
    ```
 
    Si tecleas el comando `git remote -v` podrás ver todas las url de los remotos y
