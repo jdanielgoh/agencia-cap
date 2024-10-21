@@ -19,8 +19,10 @@
   },
   "dependencies": {
     "pinia": "^2.1.7",
-    "sisdai-componentes": "git+https://codigo.conahcyt.mx/sisdai/sisdai-componentes#v4.0.0-beta.13",
-    "sisdai-css": "git+https://codigo.conahcyt.mx/sisdai/sisdai-css#v1.2.6",
+    "sisdai-componentes": "git+https://codigo.conahcyt.mx/sisdai/sisdai-componentes#v4.0.0",
+    "sisdai-css": "git+https://codigo.conahcyt.mx/sisdai/sisdai-css#v1.2.7",
+    "sisdai-graficas": "git+https://codigo.conahcyt.mx/sisdai/sisdai-graficas#v5.0.2",
+    "sisdai-mapas": "git+https://codigo.conahcyt.mx/sisdai/sisdai-mapas#v1.11.9",
     "vue": "^3.4.29",
     "vue-matomo": "^4.2.0",
     "vue-router": "^4.3.3"

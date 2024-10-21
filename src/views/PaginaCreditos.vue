@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import creditosInstituciones from '@/assets/data/creditos-instituciones.json'
 import creditosInvestigadoras from '@/assets/data/creditos-investigadoras.json'
 
@@ -20,11 +20,15 @@ const investigadoras = ref(creditosInvestigadoras)
           Instituciones y organizaciones
         </h2>
         <ul class="lista-compuesta lista-logotipo">
-          <li v-for="institucion in instituciones" :key="institucion.id">
+          <li
+            v-for="institucion in instituciones"
+            :key="institucion.id"
+          >
             <a
               :href="institucion.web"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               <div class="lista-logotipo-imagen">
                 <img
                   class="a11y-oscura-filtro-blanco ally-simplificada-mantener-imagen"
@@ -50,15 +54,16 @@ const investigadoras = ref(creditosInvestigadoras)
             :key="investigadora.id"
           >
             <router-link
-            :to="{
-              name: 'Créditos / Investigadora',
-              params: {id: `${investigadora.id}` },
-            }"
+              :to="{
+                name: 'Créditos / Investigadora',
+                params: { id: `${investigadora.id}` },
+              }"
             >
               <div class="lista-avatar-imagen avatar-filtro">
                 <img
-                :src="`${cdn_archivos}sisdai/sisdai-proyecto-base/capitulo-demo/creditos/${investigadora.foto}`"
-                alt=""/>
+                  :src="`${cdn_archivos}sisdai/sisdai-proyecto-base/capitulo-demo/creditos/${investigadora.foto}`"
+                  alt=""
+                />
               </div>
               <div class="lista.compuesta-cuerpo">
                 <p class="lista-compuesta-titulo">
@@ -81,6 +86,6 @@ const investigadoras = ref(creditosInvestigadoras)
 
 <style lang="scss">
 .avatar-filtro {
-  filter:grayscale(1)
+  filter: grayscale(1);
 }
 </style>

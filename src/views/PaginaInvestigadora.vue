@@ -3,12 +3,10 @@ import { useRoute } from 'vue-router'
 import creditosInvestigadoras from '@/assets/data/creditos-investigadoras.json'
 
 const cdn_archivos = import.meta.env.VITE_CDN_ARCHIVOS
-const route = useRoute();
-const id = route.params.id;
+const route = useRoute()
+const id = route.params.id
 
-const investigadora = creditosInvestigadoras.filter(
-  d => d.id === id
-)[0]
+const investigadora = creditosInvestigadoras.filter(d => d.id === id)[0]
 </script>
 
 <template>
