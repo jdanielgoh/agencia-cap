@@ -1,6 +1,6 @@
 {
-  "name": "tula",
-  "version": "0.1.0",
+  "name": "sisdai-proyecto-base",
+  "version": "3.1.1",
   "private": true,
   "type": "module",
   "license": "LGPL-3.0-only",
@@ -43,10 +43,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://scm.crip.conacyt.mx/toxicologia/tula"
+    "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo"
   },
   "bugs": {
-    "url": "https://scm.crip.conacyt.mx/toxicologia/tula/issues"
+    "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demoissues"
   },
-  "homepage": "https://scm.crip.conacyt.mx/toxicologia/tula#readme"
+  "homepage": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo#readme"
 }
