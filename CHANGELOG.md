@@ -5,7 +5,7 @@ Todos los cambios importantes de este proyecto se documentan en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0)
 y este proyecto se adhiere al [Versionamiento semántico](https://semver.org/spec/v2.0.0.html).
 
-## [3.1.0] - 2024-10-21
+## [3.1.1] - 2024-10-21
 
 ### Cambiado (Changed)
 
@@ -13,7 +13,7 @@ y este proyecto se adhiere al [Versionamiento semántico](https://semver.org/spe
 - sisdai-css v1.3.1
 - sisdai-componentes v4.0.1
 
-## [3.0.0] - 2024-10-21
+## [3.0.1] - 2024-10-21
 
 ### Cambiado (Changed)
 
