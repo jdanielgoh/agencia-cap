@@ -16,7 +16,7 @@ const investigadora = creditosInvestigadoras.filter(d => d.id === id)[0]
         <div class="flex p-y-3">
           <div class="lista-avatar-imagen avatar-filtro">
             <img
-              :src="`${cdn_archivos}sisdai/sisdai-proyecto-base/capitulo-demo/creditos/${investigadora.foto}`"
+              :src="`${cdn_archivos}enis/capitulo-demo/creditos/${investigadora.foto}`"
               alt=""
             />
           </div>
