@@ -6,6 +6,7 @@ cambios en las bibliotecas del Sisdai, consultado los releases y/o CHANGELOG.md
 de los repositorios.**
 
 **Contenido de esta versión**
+
 - Hecha en Vue 3
 - Identidad gráfica del gobierno federal para el periodo 2018-2024
 - Vista de visualizaciones
@@ -16,6 +17,7 @@ de los repositorios.**
 
 **Para consultar cambios y actualizaciones de este proyecto ir al archivo
 CHANGELOG.md**
+
 <hr>
 
 # eni-capitulo-demo
@@ -49,14 +51,14 @@ en su equipo a través del **protocolo HTTPS**.
 ### Contenido del proyecto
 
 | Elemento                    | Ubicacion                  | Descripción                                                                                                                                                            |
-|-----------------------------| -------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | main.js                     | src/                       | Archivo en donde estan precargados sisdai-css y sisdai-componentes y se configura el matomo                                                                            |
 | App.vue                     | src/                       | Archivo con la estructura basica de un proyecto, como cabeceras, pies de página, barra de navegación, menú de accesibilidad y componente con información de despliegue |
 | PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capitulo eni                                                                              |
-| PaginaVisualizaciones.vue   | src/views/| Vista en Vue con un ejemplo de una gráfica de barras con globo de información. |
-| PaginaCreditos.vue          |src/views| Vista en Vue con ejemplos de créditos para organizaciones y personas investigadoras.                                                                                   |
-| PaginaInvestigadora.vue     |src/views| Vista en Vue de un perfil de persona investigadora.|
-| PaginaOtraVista.vue         |src/views|Ejemplo de una vista en Vue vacía.|
+| PaginaVisualizaciones.vue   | src/views/                 | Vista en Vue con un ejemplo de una gráfica de barras con globo de información.                                                                                         |
+| PaginaCreditos.vue          | src/views                  | Vista en Vue con ejemplos de créditos para organizaciones y personas investigadoras.                                                                                   |
+| PaginaInvestigadora.vue     | src/views                  | Vista en Vue de un perfil de persona investigadora.                                                                                                                    |
+| PaginaOtraVista.vue         | src/views                  | Ejemplo de una vista en Vue vacía.                                                                                                                                     |
 | NavegacionPrincipalBase.vue | src/components/nagevacion/ | Utilizando la base de componente de navegación, en este componente se pueden actualizar los links del menú del sitio                                                   |
 
 #### Ubicación de los archivos
