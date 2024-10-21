@@ -1,6 +1,6 @@
 {
   "name": "sisdai-proyecto-base",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "private": true,
   "type": "module",
   "license": "LGPL-3.0-only",
@@ -46,7 +46,7 @@
     "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo"
   },
   "bugs": {
-    "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demoissues"
+    "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo/issues"
   },
   "homepage": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo#readme"
 }
