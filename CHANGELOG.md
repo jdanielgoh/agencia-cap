@@ -5,9 +5,15 @@ Todos los cambios importantes de este proyecto se documentan en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0)
 y este proyecto se adhiere al [Versionamiento semántico](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.4] - 2024-10-21
+
+### Cambiado (Changed)
+
+- Se actualizan enlaces de MinIO para imágenes y datos
+
 ## [3.1.3] - 2024-10-21
 
-### Fixed (Changed)
+### Arreglado (Fixed)
 
 - Manera de importar variables de entorno. Se modificaron los archivos `vite.config.js`, `.env`, `.env.desarrollo`, `.env.preproduccion`, `.env.produccion`, `App.vue` y `main.js`.
 
@@ -66,6 +72,7 @@ Identidad gráfica del gobierno federal para el periodo 2018-2024
 - Nombre de **sisdai-proyecto-base** por **eni-capitulo-demo**
 - Enlaces a MinIO
 
+[3.1.4]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.1.4...v3.1.3
 [3.1.3]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.1.3...v3.1.2
 [3.1.2]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.1.2...v3.0.2
 [3.0.2]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.0.2...v2.3.0
