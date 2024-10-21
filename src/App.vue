@@ -1,15 +1,13 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import NavegacionPrincipalBase from '@/components/navegacion/NavegacionPrincipalBase.vue'
-import pkg from '../package.json'
+
 const ambiente = import.meta.env
 
-/*global __FECHA_CONSTRUCCION__*/
+/*global __FECHA_CONSTRUCCION__, __VERSION__*/
 /*eslint no-undef: "error"*/
 const fecha_construccion = __FECHA_CONSTRUCCION__
-const fecha_localizada = new Date(fecha_construccion).toLocaleString('es-MX', {
-  timeZone: 'America/Mexico_City',
-})
+const version_proyecto = __VERSION__
 </script>
 
 <template>
@@ -27,9 +25,9 @@ const fecha_localizada = new Date(fecha_construccion).toLocaleString('es-MX', {
 
     <SisdaiInfoDeDespliegue
       v-if="ambiente.DEV"
-      :versionProyecto="pkg.version"
+      :versionProyecto="version_proyecto"
       :entornoProyecto="ambiente.MODE"
-      :actualizacionProyecto="fecha_localizada"
+      :actualizacionProyecto="fecha_construccion"
     />
     <SisdaiPiePaginaConahcyt />
     <SisdaiPiePaginaGobMx />
