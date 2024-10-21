@@ -26,7 +26,7 @@ const lasBarras = ref()
             class="pictograma-enlace-externo"
             aria-hidden="true"
           /> </a
-        >. Te invitamos a conocer la biblioteca y su documentación para conocer
+        >. Te invitamos a conocer la biblioteca y su documentación para saber
         como construir gráficas más complejas y/o de otro tipo.
       </p>
       <div class="contenedor ancho-lectura">
@@ -75,7 +75,6 @@ const lasBarras = ref()
           </SisdaiBarras>
         </SisdaiGraficas>
       </div>
-      <h2>Mapas</h2>
     </div>
   </main>
 </template>
