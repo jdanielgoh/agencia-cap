@@ -60,7 +60,7 @@ Identidad gráfica del gobierno federal para el periodo 2018-2024
 - Nombre de **sisdai-proyecto-base** por **eni-capitulo-demo**
 - Enlaces a MinIO
 
-[3.1.0]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.1.1...v3.0.1
-[3.0.0]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.0.1...v2.3.0
+[3.1.1]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.1.1...v3.0.1
+[3.0.1]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v3.0.1...v2.3.0
 [2.3.0]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v2.3.0...v2.2.0
 [2.2.0]: https://codigo.conahcyt.mx/eni/eni-capitulo-demo/compare/v2.2.0...v2.1.0
