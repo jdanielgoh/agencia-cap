@@ -1,4 +1,4 @@
-# eni-capitulo-demo
+# Tula
 
 Este repositorio contiene el proyecto base para levantar una página web con los
 requerimientos mínimos para un proyecto que utilice

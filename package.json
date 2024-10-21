@@ -1,6 +1,6 @@
 {
-  "name": "sisdai-proyecto-base",
-  "version": "3.1.2",
+  "name": "tula",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "license": "LGPL-3.0-only",
@@ -43,10 +43,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base"
+    "url": "https://scm.crip.conacyt.mx/toxicologia/tula"
   },
   "bugs": {
-    "url": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base/issues"
+    "url": "https://scm.crip.conacyt.mx/toxicologia/tula/issues"
   },
-  "homepage": "https://codigo.conahcyt.mx/sisdai/sisdai-proyecto-base#readme"
+  "homepage": "https://scm.crip.conacyt.mx/toxicologia/tula#readme"
 }
