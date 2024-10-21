@@ -35,7 +35,7 @@ en su equipo a través del **protocolo HTTPS**.
 | index.js                    | src/router/                | Archivo en donde se escriben todas las rutas que tiene el sitio, el path que aparecera en la url, el título de la página y el archivo que contiene la vista            |
 | PaginaInicio.vue            | src/views/                 | Vista en Vue con un ejemplo de portada para iniciar el contenido de un nuevo capítulo ENI                                                                              |
 | ErrorPaginaNoEncontrada.vue | src/views/                 | Vista en Vue de ejemplo para cuando se escribe una ruto que no existe                                                                                                  |
-| OtraVista.vue               | src/views/                 | Vista en Vue vacía como base para agregar una vista al sitio                                                                                                           |
+| PaginaOtraVista.vue         | src/views/                 | Vista en Vue vacía como base para agregar una vista al sitio                                                                                                           |
 | NavegacionPrincipalBase.vue | src/components/navegacion/ | Usa como base el componente de navegación de Sisdai y se edita para con las vistas que conformarán el sitio web                                                        |
 
 #### Ubicación de los archivos
@@ -50,7 +50,7 @@ sisdai-proyecto-base/
     ├── views/
     │   ├── PaginaInicio.vue
     │   ├── ErrorPaginaNoEncontrada.vue
-    │   └── OtraVista.vue
+    │   └── PaginaOtraVista.vue
     └── components/
         └── navegacion
             └── NavegacionPrincipalBase.vue

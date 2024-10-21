@@ -22,6 +22,24 @@ const nombre = computed(() => route.name)
         <RouterLink
           class="nav-hipervinculo"
           exact
+          to="/visualizaciones"
+        >
+          Visualizaciones
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink
+          class="nav-hipervinculo"
+          exact
+          to="/creditos"
+        >
+          Créditos
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink
+          class="nav-hipervinculo"
+          exact
           to="/otra-vista"
         >
           Otra Vista

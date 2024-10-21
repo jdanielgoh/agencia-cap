@@ -23,9 +23,24 @@ const router = createRouter({
       component: PaginaInicio,
     },
     {
+      path: '/visualizaciones',
+      name: 'Visualizaciones',
+      component: () => import('@/views/PaginaVisualizaciones.vue'),
+    },
+    {
+      path: '/creditos',
+      name: 'Créditos',
+      component: () => import('@/views/PaginaCreditos.vue'),
+    },
+    {
+      path: '/creditos/:id',
+      name: 'Créditos / Investigadora',
+      component: () => import('@/views/PaginaInvestigadora.vue'),
+    },
+    {
       path: '/otra-vista',
       name: 'Otra Vista',
-      component: () => import('@/views/OtraVista.vue'),
+      component: () => import('@/views/PaginaOtraVista.vue'),
     },
     {
       path: '/:pathMatch(.*)*',

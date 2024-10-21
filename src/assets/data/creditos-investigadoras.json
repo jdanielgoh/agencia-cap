@@ -1,0 +1,23 @@
+[
+  {
+    "id": "NombrePersona1",
+    "foto": "crepa-1.png",
+    "nombre": "Nombre Persona Investigadora",
+    "rol": "Rol en el proyecto",
+    "institucion": "Institución a la que representa",
+    "semblanza": [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "Harum, alias quidem cum ratione temporibus fugit pariatur eos dolor voluptatibus maiores minus, tenetur repellendus error est odio iure eius ut praesentium."
+    ]
+  },
+  {
+    "id": "NombrePersona2",
+    "foto": "becka.png",
+    "nombre": "Nombre Otra Persona Investigadora",
+    "rol": "Rol en el proyecto",
+    "institucion": "Institución a la que representa",
+    "semblanza": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt quod ut! At voluptate facilis eius quaerat, voluptatibus adipisci ut voluptates omnis illum repudiandae neque suscipit sapiente eaque sequi magnam!"
+    ]
+  }
+]
