@@ -11,9 +11,6 @@ proyecto.
 Cualquier persona puede hacer uso de esta biblioteca al clonarla e instalarla
 en su equipo a través del **protocolo HTTPS**.
 
-**Para consultar cambios y actualizaciones de este proyecto ir al archivo
-CHANGELOG.md**
-
 ## Acerca de este proyecto
 
 ### ¿Qué utilidades contiene este proyecto?
@@ -49,18 +46,18 @@ eni-capitulo-demo/
 └── src/
     ├── main.js
     ├── App.vue
-    ├── components/
-    │   └── navegacion
-    │       └── NavegacionPrincipalBase.vue
-    ├── store/
-    │   └── index.js #variables accesibilidad
-    └── views/
-        └── PaginaInicio.vue
-        └── PaginaVisualizaciones.vue
-        └── PaginaCreditos.vue
-        └── PaginaInvestigadora.vue
-        └── PaginaOtraVista.vue
-        └── ErrorPaginaNoEncontrada.vue
+    ├── router/
+    │   └── index.js
+    ├── views/
+    │   ├── PaginaInicio.vue
+    │   └── PaginaVisualizaciones.vue
+    │   └── PaginaCreditos.vue
+    │   └── PaginaInvestigadora.vue
+    │   └── PaginaOtraVista.vue
+    │   └── ErrorPaginaNoEncontrada.vue
+    └── components/
+        └── navegacion
+            └── NavegacionPrincipalBase.vue
 ```
 
 ## Instalación y uso
@@ -84,7 +81,7 @@ y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 
 Si tienes un repositorio de código vacío y quieres iniciar con el proyecto
 base, sigue estas instrucciones. Si ya tienes contenido en tu proyecto y
-quieres integrar el proyecto base, ve al paso 4.
+quieres integrar el capítulo demo, ve al paso 4.
 
 1. Crea una carpeta en tu local con el nombre de tu proyecto.
 
@@ -107,7 +104,7 @@ quieres integrar el proyecto base, ve al paso 4.
    git remote add origin https://scm.crip.conacyt.mx/mi-proyecto.git
    ```
 
-4. Agrega el remoto del proyecto base.
+4. Agrega el remoto del capítulo demo.
 
    ```bash
    git remote add eni-capitulo-demo https://codigo.conahcyt.mx/sisdai/eni-capitulo-demo.git
@@ -145,9 +142,9 @@ quieres integrar el proyecto base, ve al paso 4.
    ```
 
 Ahora ya puedes integrar tus cambios a otras ramas o subirlos al repositorio
-original. Puedes borrar el _remote_ del proyecto base y conservar solamente
+original. Puedes borrar el _remote_ del capítulo demo y conservar solamente
 el de tu repositorio original. Estos pasos también te funcionarán para
-obtener cambios del proyecto base si los necesitas.
+obtener cambios del capítulo demo si los necesitas.
 
 ### Configuración
 
@@ -172,66 +169,94 @@ obtener cambios del proyecto base si los necesitas.
     preproducción, y `.env.production` para un ambiente de
     producción. Se dejan por defecto estos cuatro archivos en el proyecto, pero
     pueden crearse o eliminarse de acuerdo al mismo. También se dejan en los
-    archivos, variables de ambiente por defecto que se usan en este proyecto base
+    archivos, variables de ambiente por defecto que se usan en este capítulo demo
     y
     que son propias de los capítulos de los ENI, sin embargo se deben agregar o
     quitar de acuerdo al proyecto a desarrollar. Se deja aquí el ejemplo del
     archivo de ambiente local `.env`.
 
     ```js
-    // modo del ambiente en el que se levanta el proyecto
-    NODE_ENV = local
-
-    // título del proyecto, este aparecerá en la pestaña del navegador
-    VUE_APP_TITLE = local | eni-capitulo-demo
-
-    // descripción del proyecto, se utiliza para agregar metadatos para el navegador
-    VUE_APP_DESCRIPTION = local | descripcion
-
-    // el dominio en el que se verá tu proyecto
-    // en un entorno local es localhost:seguido-del-puerto
-    // para el ambiente de pruebas y producción
-    // debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
-    VUE_APP_ENI_DOMAIN = http://localhost:8080
-
-    // carpeta o subcarpeta en donde se hospeda el código
-    // se agrega la / cuando el proyecto está en raíz
-    // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar
-    // ej. para https://energia.conahcyt.mx/planeas/ el es VUE_APP_BASE_ROUTE = /planeas/
-    VUE_APP_BASE_ROUTE = /
-
-    // es una variable que utiliza en su configuración Vue, normalmente es true
-    VUE_APP_HASH = true
-
-    // variable para matomo (si cuentas con esta tecnoogía)
-    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto
+    // variable para matomo (si cuentas con esta tecnología),
+    // se mantiene en 0 cuando no se ha asignado un ID específico para el proyecto,
     // se cambia únicamente para el ambiente de producción
-    VUE_APP_MATOMO_SITEID = 0
+    VITE_MATOMO_ID = 0
 
-    // url de la carpeta de archivos estáticos (imágenes, documentos, etc)
-    // donde se alojan tus insumos si no los guardas en el front-end
+    // título del proyecto, éste aparecerá en la pestaña del navegador
+    VITE_TITULO = Título del proyecto
+
+    // descripción del proyecto, se utiliza para agregar metadatos en el navegador
+    VITE_DESCRIPCION = Descripción del proyecto
+
+    // palabras clave del proyecto, se utiliza para que los buscadores indexen el proyecto con estas etiquetas para mejorar las busquedas en los motores como Google
+    VITE_PALABRAS_CLAVE = palabras, clave, separadas, por, coma
+
+    // url completa de donde se encuentra la imagen que se utilizará como portada a la hora de compartir en redes sociales
+    VITE_IMAGEN = https://dominio.mx/archivo-imagen-para-compartir.jpg
+
+    // para cuando el proyecto viene de otro proyecto más grande, por ejemplo un ENI, aqui va el nombre del ENI en particular
+    VITE_PROYECTO_MADRE =
+
+    // el dominio en el que se verá tu proyecto,
+    // en un entorno local es localhost:seguido-del-puerto
+    // para el ambiente de pruebas y producción debes agregar el nombre del dominio ej. https://energia.conahcyt.mx
+    VITE_DOMINIO = http://localhost:5173
+
+    // carpeta o subcarpeta en donde se hospeda el código,
+    // se agrega la / cuando el proyecto está en raíz,
+    // pero si tiene un subfolder como pasa en todos los capitulos ENI se debe agregar el nombre del capítulo en formato corto
+    // ejemplo: para https://energia.conahcyt.mx/planeas/ el VITE_URL_BASE = /planeas/
+    VITE_URL_BASE = /
+
+    // url de la carpeta de archivos estáticos (imágenes, documentos, etc) donde se alojan tus insumos si no los guardas en el front-end,
     // ej. en desarrollo: https://dev-dadsig-cdn.crip.conahcyt.mx/enis/energia/planeas/
     // ej. en produccion: https://cdn.conahcyt.mx/enis/energia/planeas/
-    VUE_APP_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+    VITE_CDN_ARCHIVOS = https://dev-dadsig-cdn.crip.conahcyt.mx/
+
+    // metadato para decirle a los bots si se puede indexar la página
+    // ej. en desarrollo: noindex, nofollow
+    // ej. en produccion: index, follow
+    VITE_INDEXACION = index, follow
     ```
 
-12. Actualiza este README.md con la información que requiera tu proyecto
+12. Actualiza este README.md con la información que requiera tu proyecto.
+
+13. Actualiza la licencia de tu proyecto. La licencia incluída aquí es únicamente para eni-capitulo-demo. Una vez
+    que tengas tu propio proyecto deberás modificar la licencia de acuerdo con
+    los lineamientos del proyecto [GNU](https://www.gnu.org/licenses/licenses.html).
 
 ### Correr y compilar
 
-13. Para levantar el proyecto en un servidor local
+Para levantar el proyecto en un servidor local.
 
 ```bash
 npm run dev
 ```
 
-14. Para compilar el proyecto en un ambiente de desarrollo
+Para levantar el proyecto en un servidor local en modo de preproducción.
+
+```bash
+npm run dev:pp
+```
+
+Para levantar el proyecto en un servidor local en modo de producción.
+
+```bash
+npm run dev:prod
+```
+
+Para compilar el proyecto en un ambiente de desarrollo.
 
 ```bash
 npm run build:dev
 ```
 
-15. Para compilar el proyecto en un ambiente de producción
+Para compilar el proyecto en un ambiente de preproducción.
+
+```bash
+npm run build:pp
+```
+
+Para compilar el proyecto en un ambiente de producción.
 
 ```bash
 npm run build
@@ -240,15 +265,11 @@ npm run build
 En el `package.json` por defecto se incluyen otras instrucciones que te pueden
 ayudar a revisar el proyecto.
 
-La licencia incluída aquí es únicamente para eni-capitulo-demo. Una vez
-que tengas tu propio proyecto deberás modificar la licencia de acuerdo con
-los lineamientos del proyecto [GNU](https://www.gnu.org/licenses/licenses.html).
-
 ## Linter del código
 
 Para garantizar el buen funcionamiento y cumplimiento de buenas prácticas de
-código se implementó un linter en este proyecto base. La documentación del mismo
-la puedes encontrar en el archivo `linter.md`.
+código se implementó un linter en este capítulo demo. La documentación del mismo
+la puedes encontrar en el archivo [linter.md](./linter.md).
 
 ## Licencia
 
