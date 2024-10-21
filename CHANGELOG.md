@@ -13,6 +13,7 @@ y este proyecto se adhiere al [Versionamiento semántico](https://semver.org/spe
 - Vite 5.3.1
 - Demás dependencias derivadas de los cambios anteriores
 - sisdai-componentes v4.0.0
+- sisdai-css a antigua versión v1.2.7 (para tener la antigua identidad gráfica)
 
 ### Agregado (Added)
 

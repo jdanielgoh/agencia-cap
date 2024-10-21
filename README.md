@@ -97,7 +97,7 @@ y dependencias del proyecto se muestran aquí usando tanto npm, como nvm.
 
 - [node.js (^20)](https://nodejs.org/en/download/)
 - [npm (^10)](https://www.npmjs.com/get-npm)
-- [Vue.js (v2.7.14)](https://vuejs.org/)
+- [Vue.js (^3)](https://vuejs.org/)
 
 ### Instalación y vinculación con tu proyecto
 
