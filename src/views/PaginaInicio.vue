@@ -7,7 +7,7 @@ const cdn_achivos = import.meta.env.VITE_CDN_ARCHIVOS
     <div class="portada">
       <img
         class="portada-imagen"
-        :src="`${cdn_achivos}sisdai/sisdai-proyecto-base/inicio/pekihermosa.png`"
+        :src="`${cdn_achivos}enis/capitulo-demo/inicio/pekihermosa.png`"
         alt="portada de ejemplo: gato cálico mirando al frente"
       />
       <div class="portada-degradado">

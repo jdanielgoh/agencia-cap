@@ -32,7 +32,7 @@ const investigadoras = ref(creditosInvestigadoras)
               <div class="lista-logotipo-imagen">
                 <img
                   class="a11y-oscura-filtro-blanco ally-simplificada-mantener-imagen"
-                  :src="`${cdn_archivos}sisdai/sisdai-proyecto-base/capitulo-demo/creditos/${institucion.logo}`"
+                  :src="`${cdn_archivos}enis/capitulo-demo/capitulo-demo/creditos/${institucion.logo}`"
                 />
               </div>
               <div class="lista-compuesta-cuerpo">
@@ -61,7 +61,7 @@ const investigadoras = ref(creditosInvestigadoras)
             >
               <div class="lista-avatar-imagen avatar-filtro">
                 <img
-                  :src="`${cdn_archivos}sisdai/sisdai-proyecto-base/capitulo-demo/creditos/${investigadora.foto}`"
+                  :src="`${cdn_archivos}enis/capitulo-demo/capitulo-demo/creditos/${investigadora.foto}`"
                   alt=""
                 />
               </div>
