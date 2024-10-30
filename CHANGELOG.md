@@ -5,7 +5,14 @@ Todos los cambios importantes de este proyecto se documentan en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0)
 y este proyecto se adhiere al [Versionamiento semántico](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.6] - 2024-10-30
+
+### Arreglado (Fixed)
+
+- Se cambió la forma en la que las variables de entorno se llaman en los scripts del `package.json` para que sea compatible con Windows
+
 ## [3.1.5] - 2024-10-21 - Release
+
 ### Cambiado (Changed)
 
 - sisdai-componentes v4.1.4
