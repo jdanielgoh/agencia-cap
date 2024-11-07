@@ -1,4 +1,4 @@
-# eni-capitulo-demo
+# proyecto-base
 
 Este repositorio contiene el proyecto base para levantar una página web con los
 requerimientos mínimos para un proyecto que utilice
@@ -42,7 +42,7 @@ en su equipo a través del **protocolo HTTPS**.
 #### Ubicación de los archivos
 
 ```bash
-eni-capitulo-demo/
+proyecto-base/
 └── src/
     ├── main.js
     ├── App.vue
@@ -107,7 +107,7 @@ quieres integrar el capítulo demo, ve al paso 4.
 4. Agrega el remoto del capítulo demo.
 
    ```bash
-   git remote add eni-capitulo-demo https://codigo.conahcyt.mx/eni/eni-capitulo-demo.git
+   git remote add proyecto-base https://codigo.conahcyt.mx/eni/proyecto-base.git
    ```
 
    Si tecleas el comando `git remote -v` podrás ver todas las url de los remotos y
@@ -116,14 +116,14 @@ quieres integrar el capítulo demo, ve al paso 4.
 5. Configura el repositorio remoto del sisdai para no bajar los tags ni heads
 
    ```bash
-   git config remote.eni-capitulo-demo.fetch '+refs/heads/*:refs/heads/*'
-   git config remote.eni-capitulo-demo.tagopt --no-tags
+   git config remote.proyecto-base.fetch '+refs/heads/*:refs/heads/*'
+   git config remote.proyecto-base.tagopt --no-tags
    ```
 
-6. Baja los últimos cambios del eni-capitulo-demo
+6. Baja los últimos cambios del proyecto-base
 
    ```bash
-   git pull --no-rebase eni-capitulo-demo main --allow-unrelated-histories
+   git pull --no-rebase proyecto-base main --allow-unrelated-histories
    ```
 
    **En caso de que tengas contenido en tu proyecto, resuelve los conflictos que
@@ -220,7 +220,7 @@ obtener cambios del capítulo demo si los necesitas.
 
 12. Actualiza este README.md con la información que requiera tu proyecto.
 
-13. Actualiza la licencia de tu proyecto. La licencia incluída aquí es únicamente para eni-capitulo-demo. Una vez
+13. Actualiza la licencia de tu proyecto. La licencia incluída aquí es únicamente para proyecto-base. Una vez
     que tengas tu propio proyecto deberás modificar la licencia de acuerdo con
     los lineamientos del proyecto [GNU](https://www.gnu.org/licenses/licenses.html).
 
@@ -275,7 +275,7 @@ la puedes encontrar en el archivo [linter.md](./linter.md).
 
 **SOFTWARE LIBRE Y ESTÁNDARES ABIERTOS**
 
-Sisdai y eni-capitulo-demo están alineadas a las disposiciones establecidas
+Sisdai y proyecto-base están alineadas a las disposiciones establecidas
 por
 la Coordinación de Estrategia Digital Nacional (
 DOF:06/09/2021) en donde se estipula que las "políticas y disposiciones tienen
@@ -287,7 +287,7 @@ artículo 63 se explicita que "cuando se trate
 de desarrollos basados en software libre, se respetarán las condiciones de su
 licenciamiento original [...]".
 
-Considerando lo anterior eni-capitulo-demo se publica bajo la licencia
+Considerando lo anterior proyecto-base se publica bajo la licencia
 [LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.html). Dicha licencia se puede
 consultar en el archivo _LICENSE_ de este repositorio.
 Esta licencia se encuentra disponible en inglés porque aunque el Sisdai
