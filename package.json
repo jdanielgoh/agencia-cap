@@ -1,5 +1,5 @@
 {
-  "name": "eni-capitulo-demo",
+  "name": "proyecto-base",
   "version": "3.1.6",
   "private": true,
   "type": "module",
@@ -44,10 +44,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo"
+    "url": "git+https://codigo.conahcyt.mx/eni/proyecto-base"
   },
   "bugs": {
-    "url": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo/issues"
+    "url": "git+https://codigo.conahcyt.mx/eni/proyecto-base/issues"
   },
-  "homepage": "git+https://codigo.conahcyt.mx/eni/eni-capitulo-demo#readme"
+  "homepage": "git+https://codigo.conahcyt.mx/eni/proyecto-base#readme"
 }
