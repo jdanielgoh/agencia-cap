@@ -21,11 +21,7 @@ import VueMatomo from 'vue-matomo'
 import 'sisdai-css/dist/sisdai.min.css'
 import SisdaiComponentes from 'sisdai-componentes'
 
-import {
-  SisdaiGraficas,
-  SisdaiGraficasGloboInfo,
-  SisdaiBarras,
-} from 'sisdai-graficas/src/componentes'
+import SisdaiGraficas from 'sisdai-graficas'
 
 const app = createApp(App)
 
@@ -33,8 +29,6 @@ app.use(createPinia())
 app.use(router)
 app.use(SisdaiComponentes)
 app.use(SisdaiGraficas)
-app.use(SisdaiGraficasGloboInfo)
-app.use(SisdaiBarras)
 
 const idMatomo = Number(import.meta.env.VITE_MATOMO_ID)
 if (idMatomo !== 0 || Number.isNaN(idMatomo)) {

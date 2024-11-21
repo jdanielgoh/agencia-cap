@@ -18,7 +18,7 @@ const version_proyecto = __VERSION__
     >
       Ir a contenido principal
     </a>
-    <SisdaiMenuAccesibilidad perfilColor="eni" />
+    <SisdaiMenuAccesibilidad perfilColor="gema" />
     <SisdaiNavegacionGobMx />
     <NavegacionPrincipalBase />
     <RouterView />
